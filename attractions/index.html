@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Attractions
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/535926b96b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="h-screen bg-[url('./images/wooloo-3_upscaled.jpg')] bg-cover bg-center relative;">
+    <header class="bg-[#E5E5B1] bg-opacity-80 py-4 relative z-20">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-lg font-bold">
+                Logo
+            </div>
+            <nav class="space-x-10 hidden md:flex">
+                <a class="text-[#4C5024] hover:font-bold" href="index.html">Home</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">About Us</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Attractions</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Events</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Culture</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-green-900 focus:outline-none" id="menu-button"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <nav class="flex flex-col space-y-4 mt-4 px-4">
+                <a class="text-[#4C5024] hover:font-bold" href="index.html">Home</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">About Us</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Attractions</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Events</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Culture</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div
+        class="absolute inset-0 h-auto bg-gradient-to-r from-[hsla(69,45%,12%,0.9)] via-[hsla(69,45%,12%, 0.4)] to-transparent pointer-events-none">
+    </div>
+    <main class="container mx-auto px-4 py-16 relative z-10">
+        <div class="flex flex-col md:flex-row items-start">
+            <div class="text-[#F9F9EC] md:w-1/2">
+                <p id="description-loc" class="text-sm mt-20"><i class="fa-solid fa-location-dot"></i> Brgy. Garing,
+                    Consolacion</p>
+                <h1 id="dynamic-title" class="text-6xl font-bold mt-4">
+                    WOOLOO RESORT
+                </h1>
+                <p id="dynamic-description" class="text-lg mt-4">
+                    The Wooloo Resort is the ideal getaway from the hustle and bustle of the city. A beautifully
+                    constructed main bamboo house can accommodate up to 12 people.
+                </p>
+                <!--=======change onclick function of every place=====-->
+                <button id="dynamic-button" onclick="wooloo()"
+                    class="mt-6 px-6 py-3 bg-transparent text-[#E5E5B1] border-2 border-[#E5E5B1] font-bold rounded-full hover:bg-[#E5E5B1] hover:text-[#4C5024] transition">
+                    More About Wooloo
+                </button>
+            </div>
+            <div class="relative md:w-1/2 mt-12 md:mt-0 md:ml-8" style="margin-top: 6rem;">
+                <div class="carousel">
+                    <div id="northPeak" class=" carousel-item relative cursor-pointer" onclick="changeContent(0)">
+                        <img alt="Image of North Peak Cafe" class="rounded-lg w-full h-96 object-cover"
+                            src="images\north_peak-1.jpg" />
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-[#4C5024] bg-opacity-60 text-white p-4 rounded-b-lg">
+                            <p class="text-sm"><i class="fa-solid fa-location-dot"></i> Brgy. Panoypoy, Consolacion</p>
+                            <h2 class="text-xl font-bold">
+                                NORTH PEAK CAFE
+                            </h2>
+                        </div>
+                    </div>
+                    <div id="greenlandCabin" class=" carousel-item hidden relative cursor-pointer"
+                        onclick="changeContent(1)">
+                        <img alt="Image of Greenland Cabins" class="rounded-lg w-full h-96 object-cover"
+                            src="images\greenland-1.jpg" />
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-[#4C5024] bg-opacity-60 text-white p-4 rounded-b-lg">
+                            <p class="text-sm"><i class="fa-solid fa-location-dot"></i> Brgy. Panoypoy, Consolacion</p>
+                            <h2 class="text-xl font-bold">
+                                GREENLAND CABINS
+                        </div>
+                    </div>
+                    <div id="highlandEcofarm" class="carousel-item hidden relative cursor-pointer"
+                        onclick="changeContent(2)">
+                        <img alt="Image of Highland Mango Eco Farm" class="rounded-lg w-full h-96 object-cover"
+                            src="images\mango_ecofarm-1.jpg" />
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-[#4C5024] bg-opacity-75 text-white p-4 rounded-b-lg">
+                            <p class="text-sm">
+                                Brgy. Another Place, Consolacion
+                            </p>
+                            <h2 class="text-xl font-bold">
+                                HIGHLAND MANGO ECOFARM
+                            </h2>
+                        </div>
+                    </div>
+                    <div id="woolooResort" class="carousel-item hidden relative cursor-pointer"
+                        onclick="changeContent(3)">
+                        <img alt="Image of Wooloo Resort" class="rounded-lg w-full h-96 object-cover"
+                            src="images\wooloo-3_upscaled.jpg" />
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-[#4C5024] bg-opacity-75 text-white p-4 rounded-b-lg">
+                            <p class="text-sm">
+                                Brgy. Garing, Consolacion
+                            </p>
+                            <h2 class="text-xl font-bold">
+                                WOOLOO RESORT
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between mt-4">
+                    <button
+                        class="px-4 py-2 bg-[#E5E5B1] text-[#4C5024] font-bold rounded-full hover:bg-[#4C5024] hover:text-[#E5E5B1] transition"
+                        id="prev-button">
+                        Previous
+                    </button>
+                    <button
+                        class="px-4 py-2 bg-[#E5E5B1] text-[#4C5024] font-bold rounded-full hover:bg-[#4C5024] hover:text-[#E5E5B1] transition"
+                        id="next-button">
+                        Next
+                    </button>
+                </div>
+            </div>
+    </main>
+
+
+    <!--script-->
+    <script src="conso.js"></script>
+</body>
+
+</html>

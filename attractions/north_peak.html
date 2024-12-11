@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Peak Cafe</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/535926b96b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+
+<body class="relative">
+    <!-- Header (Visible Globally) -->
+    <header class="bg-[#4C5024] py-4 relative w-full z-30">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-lg font-bold">Logo</div>
+            <nav class="space-x-10 hidden md:flex">
+                <a class="text-[#E5E5B1] hover:font-bold" href="landingPage.html">Home</a>
+                <a class="text-[#E5E5B1] hover:font-bold" href="#">About Us</a>
+                <a class="text-[#E5E5B1] hover:font-bold" href="index.html">Attractions</a>
+                <a class="text-[#E5E5B1] hover:font-bold" href="#">Events</a>
+                <a class="text-[#E5E5B1] hover:font-bold" href="#">Culture</a>
+                <a class="text-[#E5E5B1] hover:font-bold" href="#">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-[#E5E5B1] focus:outline-none" id="menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navbar -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <nav class="flex flex-col space-y-4 mt-4 px-4">
+                <a class="text-[#E5E5B1] hover:font-bold" href="landingPage.html">Home</a>
+                <a class="text-[#E5E5B1] hover:font-bold" href="#">About Us</a>
+                <a class="text-[#E5E5B1] hover:font-bold" href="index.html">Attractions</a>
+                <a class="text-[#E5E5B1] hover:font-bold" href="#">Events</a>
+                <a class="text-[#E5E5B1] hover:font-bold" href="#">Culture</a>
+                <a class="text-[#E5E5B1] hover:font-bold" href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!--first section-->
+    <section class="container mx-auto px-4 py-16 relative z-10">
+        <div class="flex flex-wrap justify-center items-center mt-10 max-w-screen-lg mx-auto">
+            <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg flex flex-wrap space-y-6 md:space-y-0">
+                <!-- Image Section -->
+                <div class="relative w-full md:w-1/2 px-4">
+                    <img alt="A beautiful Wooloo resort with a scenic view" 
+                         class="rounded-lg w-full h-auto object-cover " 
+                         src="images/North-Peak-2.jpg" />
+                </div>
+                <!-- Content Section -->
+                <div class="w-full md:w-1/2 max-w-md flex justify-between mb-4 md:mb-0">
+                    <p class="text-[#4a4e1a] mt-10 ml-5 md:mt-20">
+                        <strong>Woolo</strong> is a boutique resort perched on top of the Consolacion mountains. 
+                        This eco-friendly,bamboo-clad resort is perfect for disconnecting from the world and becoming one with nature.
+                        It boasts unimpeded countryside views and its lush greenery, plus a peek into the Cebu City skyline. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--second section(Kuma)-->
+    <section class="container mx-auto px-4 py-16 relative z-10">
+        <div class="flex flex-wrap justify-center items-center mt-10 max-w-screen-lg mx-auto">
+            <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg flex flex-wrap space-y-6 md:space-y-0">
+                <!-- Image Section -->
+                <div class="relative w-full md:w-1/2 px-4">
+                    <h1 class="text-3xl text-[#4a4e1a] font-bold text-center">Kuma</h1>
+                    <h4 class="text-sm text-[#4a4e1a] font-medium text-center pb-2">(House 1)</h4>
+                    <img alt="A beautiful Wooloo resort with a scenic view" 
+                         class="rounded-lg w-full h-auto object-cover " 
+                         src="images/wooloo-kumu.jpg" />
+                </div>
+                <!-- Content Section -->
+                <div class="w-full md:w-1/2 max-w-md flex justify-between mb-4 md:mb-0">
+                    <ol class="text-[#4a4e1a] text-light mt-2 ml-5 md:mt-20 lg:mt-20 text-center">
+                        <li class="list-none">Weekdays (Monday to Thursday) - Php 7,888</li>
+                        <li class="list-none">Weekends (Friday to Sunday and Holiday) - Php 9,888</li>
+                        <li class="list-none">Rates are good for 6 persons with brunch for 6</li>
+                        <li class="list-none">Extra brunch - Php 180 (Plated)</li>
+                        <li class="list-none">Extra Person - Php 588 (With Mattress), Php 388 (Without Mattress)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--third section(Sasa)-->
+    <section class="container mx-auto px-4 py-16 relative z-10">
+        <div class="flex flex-wrap justify-center items-center mt-10 max-w-screen-lg mx-auto">
+            <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg flex flex-wrap space-y-6 md:space-y-0">
+                <!-- Image Section -->
+                <div class="relative w-full md:w-1/2 px-4">
+                    <img alt="A beautiful Wooloo resort with a scenic view" 
+                         class="rounded-lg w-full h-auto object-cover " 
+                         src="images/wooloo-sasa2.jpg" />
+                </div>
+                <!-- Content Section -->
+                <div class="w-full md:w-1/2 max-w-md flex justify-between mb-4 md:mb-0">
+                    <p class="text-[#4a4e1a] mt-2 ml-5 md:mt-10">
+                        <strong>Woolo</strong> is a boutique resort perched on top of the Consolacion mountains. 
+                        This eco-friendly,bamboo-clad resort is perfect for disconnecting from the world and becoming one with nature.
+                        It boasts unimpeded countryside views and its lush greenery, plus a peek into the Cebu City skyline. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!--script-->
+<script>
+const menuButton = document.getElementById('menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+// Toggle mobile menu visibility
+menuButton.addEventListener('click', function () {
+    mobileMenu.classList.toggle('hidden');
+});
+
+</script>
+</body>
+
+</html>

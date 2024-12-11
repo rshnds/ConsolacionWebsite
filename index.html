@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Landing Page
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/535926b96b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="relative overflow-hidden bg-[#E5E5B1]">
+    <!-- Header (Visible Globally) -->
+    <header class="bg-[#E5E5B1] bg-opacity-80 py-4 fixed w-full z-30">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-lg font-bold">Logo</div>
+            <nav class="space-x-10 hidden md:flex">
+                <a class="text-[#4C5024] hover:font-bold" href="#">Home</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">About Us</a>
+                <a class="text-[#4C5024] hover:font-bold" href="attractions/index.html">Attractions</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Events</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Culture</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-green-900 focus:outline-none" id="menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navbar -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <nav class="flex flex-col space-y-4 mt-4 px-4">
+                <a class="text-[#4C5024] hover:font-bold" href="#">Home</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">About Us</a>
+                <a class="text-[#4C5024] hover:font-bold" href="attractions/index.html">Attractions</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Events</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Culture</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- First Section with Video Background -->
+    <div class="relative h-screen">
+        <!-- Video Background -->
+        <video class="absolute inset-0 object-cover w-full h-full" autoplay loop muted playsinline>
+            <source src="consolacion.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <!-- Main Content -->
+        <main
+            class="container mx-auto px-4 py-16 relative z-10 flex flex-col items-center justify-center h-full text-center">
+            <div class="text-[#F9F9EC] px-4 md:px-0">
+                <span class="text-4xl md:text-5xl tracking-wide font-extrabold block">
+                    WELCOME TO CONSOLACION
+                </span>
+                <p id="dynamic-description" class="text-lg mt-4 mx-20 tracking-wider">
+                    Consolacion has something for everyone, whether you’re searching for a tranquil retreat or an
+                    exciting vacation.
+                </p>
+                <button id="dynamic-button" onclick="secondSection()"
+                    class="mt-6 px-6 py-3 bg-transparent text-[#E5E5B1] border-2 border-[#E5E5B1] font-bold rounded-full hover:bg-[#4C5024] hover:text-[#E5E5B1] hover:scale-110 transition">
+                    Start Your Journey
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Second Section -->
+    <section id="journey-section" class="min-h-screen bg-white flex items-center justify-center text-center">
+        <div class="text-[#4C5024]">
+            <h2 class="text-4xl font-extrabold">Welcome to Your Journey</h2>
+            <p class="mt-4 text-lg">Explore the beauty and attractions of Consolacion.</p>
+        </div>
+    </section>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>
