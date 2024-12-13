@@ -264,6 +264,8 @@ a {
     font-weight: 200;
     color: var(--color-100); 
     line-height: 1.6;
+    justify-content: flex-start;
+    margin-right: auto;
     margin-bottom: 1rem;
 }
 
@@ -272,6 +274,8 @@ a {
     font-weight: 250;
     color: var(--color-600); 
     line-height: 1.6;
+    justify-content: flex-start;
+    margin-right: auto;
     margin-bottom: 1rem;
 }
 
@@ -401,7 +405,7 @@ footer a {
         height: auto;
     }
 
-    #sec2 .text, #sec5 .text {
+    #sec2 .text, #sec4 .text, #sec5 .text {
         width: 100%; 
         padding: 2rem; 
     }
