@@ -51,32 +51,85 @@ const contentData = {
     }
 };
 
-// Carousel navigation (next/previous)
+// // Carousel navigation (next/previous)
+// let currentIndex = 0;
+// const items = document.querySelectorAll(".carousel-item");
+// const totalItems = items.length;
+
+// document.getElementById("next-button").addEventListener("click", function () {
+//     // Hide the current carousel item
+//     items[currentIndex].classList.add("hidden");
+
+//     // Move to the next item
+//     currentIndex = (currentIndex + 1) % totalItems;
+
+//     // Show the new carousel item
+//     items[currentIndex].classList.remove("hidden");
+// });
+
+// document.getElementById("prev-button").addEventListener("click", function () {
+//     // Hide the current carousel item
+//     items[currentIndex].classList.add("hidden");
+
+//     // Move to the previous item
+//     currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+
+//     // Show the new carousel item
+//     items[currentIndex].classList.remove("hidden");
+// });
+
 let currentIndex = 0;
 const items = document.querySelectorAll(".carousel-item");
 const totalItems = items.length;
 
-document.getElementById("next-button").addEventListener("click", function () {
-    // Hide the current carousel item
-    items[currentIndex].classList.add("hidden");
+// Function to show a specific slide
+function showSlide(index) {
+  items.forEach((item, i) => {
+    item.classList.add("hidden"); // Hide all items
+    if (i === index) item.classList.remove("hidden"); // Show active item
+  });
+}
 
-    // Move to the next item
-    currentIndex = (currentIndex + 1) % totalItems;
+// Move to the next slide
+function nextSlide() {
+  items[currentIndex].classList.add("hidden");
+  currentIndex = (currentIndex + 1) % totalItems;
+  items[currentIndex].classList.remove("hidden");
+}
 
-    // Show the new carousel item
-    items[currentIndex].classList.remove("hidden");
+// Move to the previous slide
+function prevSlide() {
+  items[currentIndex].classList.add("hidden");
+  currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+  items[currentIndex].classList.remove("hidden");
+}
+
+// Bind buttons
+const prevButton = document.getElementById("prev-button");
+const nextButton = document.getElementById("next-button");
+
+prevButton.addEventListener("click", () => {
+  prevSlide();
+  resetAutoSlide();
 });
 
-document.getElementById("prev-button").addEventListener("click", function () {
-    // Hide the current carousel item
-    items[currentIndex].classList.add("hidden");
-
-    // Move to the previous item
-    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-
-    // Show the new carousel item
-    items[currentIndex].classList.remove("hidden");
+nextButton.addEventListener("click", () => {
+  nextSlide();
+  resetAutoSlide();
 });
+
+// Auto-transition between slides every 5 seconds
+let slideInterval = setInterval(nextSlide, 3000);
+
+// Reset auto-slide when user interacts
+function resetAutoSlide() {
+  clearInterval(slideInterval);
+  slideInterval = setInterval(nextSlide, 3000);
+}
+
+// Initialize the first slide
+showSlide(currentIndex);
+
 
 
 function wooloo(){
@@ -111,7 +164,7 @@ function changeContent(dataKey) {
         } else if (dataKey === "greenlandCabin") {
             window.location.href = "greenland.html";
         } else if (dataKey === "highlandEcofarm") {
-            window.location.href = "highland_ecofarm.html";
+            window.location.href = "highland.html";
         } else if (dataKey === "woolooResort") {
             window.location.href = "wooloo.html";
         }
