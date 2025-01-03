@@ -25,7 +25,8 @@
     <header class="bg-[#E5E5B1] bg-opacity-80 py-4 fixed w-full z-30">
         <div class="container mx-auto flex justify-between items-center px-4">
             <div class="flex-shrink-0"> <a href="#">
-                <img src="/attractions/images/lacion-logo-1.png" alt="Logo of Consolacion Tourism" class="h-10 w-auto">
+                    <img src="/attractions/images/lacion-logo-1.png" alt="Logo of Consolacion Tourism"
+                        class="h-10 w-auto">
                 </a>
             </div>
             <nav class="space-x-10 hidden md:flex">
@@ -77,7 +78,7 @@
                     class="mt-6 px-6 py-3 bg-transparent text-[#E5E5B1] border-2 border-[#E5E5B1] font-bold rounded-full hover:bg-[#4C5024] hover:text-[#E5E5B1] hover:scale-110 transition">
                     Start Your Journey
                 </button>
-                <p class="text-sm mt-4 mx-20 tracking-wider">
+                <p class="text-md mt-4 mx-2 tracking-wider">
                     Consolacion has something for everyone, whether you’re searching for a tranquil retreat or an
                     exciting vacation.
                 </p>
@@ -85,15 +86,15 @@
                 <div class="grid grid-cols-3 gap-6 mt-10 mx-auto text-sm">
                     <div>
                         <p class="font-bold">Most Popular Activity</p>
-                        Maniac
+                        Trekking
                     </div>
                     <div>
-                        <p class="font-bold">Most Excited Place</p>
+                        <p class="font-bold">A Place To Connect with Nature</p>
                         Wooloo Resort
                     </div>
                     <div>
-                        <p class="font-bold">Cuture Style</p>
-                        Vintage Hawaii
+                        <p class="font-bold">Food You'd Drool For</p>
+                        Fresh Talaba
                     </div>
 
                 </div>
@@ -101,13 +102,84 @@
     </div>
 
     <!-- Second Section -->
-    <section id="journey-section" class="min-h-screen bg-white flex items-center justify-center text-center">
-        <div class="text-[#4C5024]">
-            <h2 class="text-4xl" style="font-family: 'Permanent Marker', serif;">
-                Explore The Gateway to the North
-            </h2>
-            <p class="mt-4 text-lg">Explore the beauty and attractions of Consolacion.</p>
+    <section id="journey-section"
+        class="min-h-screen flex flex-col items-center justify-center text-center bg-[#E5E5B1] bg-gradient-to-t from-[hsla(69,45%,12%,1.0)] via-[hsla(69,45%,12%, 0.4)] to-transparent opacity-0 translate-y-10 transition-all duration-700"
+        data-animation="true">
+        <h1 class="text-4xl text-[#4C5024] opacity-0 translate-y-10 transition-all duration-700 delay-600"
+            style="font-family: 'Permanent Marker', serif;">
+            Explore The Gateway to the North
+        </h1>
+        <p class="mt-4 text-lg text-[#4C5024] opacity-0 translate-y-10 transition-all duration-700 delay-600">Explore
+            the beauty and attractions of Consolacion.</p>
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 mt-10 px-4 opacity-0 translate-y-10 transition-all duration-700 delay-600">
+
+            <!--Food-->
+            <a href="#" class="relative group block rounded-lg overflow-hidden shadow-lg mx-2 hover:border-4 border-[#E5E5B1] hover:scale-110 transition">
+                <img src="images/food-1050813_1280.jpg" alt="Food And Culture" class="w-full h-48 object-cover">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 group-hover:opacity-80 transition-opacity duration-300">
+                </div>
+                <span
+                    class="absolute inset-x-0 bottom-0 text-white text-center font-semibold text-lg opacity-5 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                    Food And Culture
+                </span>
+            </a>
+
+            <!-- Events And Festival -->
+            <a href="#" class="relative group block rounded-lg overflow-hidden shadow-lg mx-2 hover:border-4 border-[#E5E5B1] hover:scale-110 transition">
+                <img src="images/sarok.jpg" alt="Food And Culture" class="w-full h-48 object-cover">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 group-hover:opacity-80 transition-opacity duration-300">
+                </div>
+                <span
+                    class="absolute inset-x-0 bottom-0 text-white text-center font-semibold text-lg opacity-5 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                    Events and Festival
+                </span>
+            </a>
+
+
+            <!-- Attractions -->
+            <a href="/attractions/index.html"
+                class="relative group block rounded-lg overflow-hidden shadow-lg mx-2 hover:border-4 border-[#E5E5B1] hover:scale-110 transition">
+                <img src="images/kahoycafe.jpg" alt="Attractions" class="w-full h-48 object-cover">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 group-hover:opacity-80 transition-opacity duration-300">
+                </div>
+                <span
+                    class="absolute inset-x-0 bottom-0 text-white text-center font-semibold text-lg opacity-5 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                    Attractions
+                </span>
+            </a>
+
+            <!-- About Us -->
+            <a href="#"
+                class="relative group block rounded-lg overflow-hidden shadow-lg mx-2 hover:border-4 border-[#E5E5B1] hover:scale-110 transition">
+                <img src="/images/about.jpg" alt="About Us" class="w-full h-48 object-cover">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 group-hover:opacity-80 transition-opacity duration-300">
+                </div>
+                <span
+                    class="absolute inset-x-0 bottom-0 text-white text-center font-semibold text-lg opacity-5 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                    About Us
+                </span>
+            </a>
         </div>
+    </section>
+
+    <!--3rd section-->
+    <section
+        class="min-h-screen flex flex-col items-center justify-center text-center bg-[#E5E5B1] bg-gradient-to-b from-[hsla(69,45%,12%,1.0)] via-[hsla(69,45%,12%, 0.4)] to-transparent pointer-events-none">
+        <h2 class="text-4xl text-[#E5E5B1]" style="font-family: 'Permanent Marker', serif;">Things to do in Consolacion
+        </h2>
+        <p class="text-[#4C5024] mt-4">Consolacion offers akulanggggg </p>
+    </section>
+
+    <!--last section-->
+    <section
+        class="min-h-screen flex flex-col items-center justify-center text-center bg-[#E5E5B1] bg-gradient-to-t from-[#4C5024] via-[hsla(69,45%,12%, 0.4)] to-transparent pointer-events-none">
+        <h2 class="text-4xl text-[#E5E5B1]" style="font-family: 'Permanent Marker', serif;">Things to do in Consolacion
+        </h2>
+        <p class="text-[#4C5024] mt-4">Consolacion offers akulanggggg </p>
     </section>
 
     <!-- Mobile Menu Toggle Script -->
