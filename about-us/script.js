@@ -8,21 +8,24 @@ menuToggle.addEventListener('click', () => {
 
 //for the cards' trigger 
 document.addEventListener("DOMContentLoaded", () => {
-    const section = document.querySelector("#recent-achievements");
-  
-    const observer = new IntersectionObserver(
+  const section = document.querySelector("#recent-achievements");
+  const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            section.classList.add("visible");
-          }
-        });
+          entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                  section.classList.add("visible"); 
+              } else {
+                  section.classList.remove("visible"); 
+              }
+          });
       },
       {
-        threshold: 0.2,
+          threshold: 0.2,
       }
-    );
-  
-    observer.observe(section);
-  });
-  
+  );
+
+  observer.observe(section);
+});
+
+
+ 

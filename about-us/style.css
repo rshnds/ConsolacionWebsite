@@ -164,16 +164,17 @@ header {
 .text h3 {
     font-size: 2rem;
     font-weight: 400;
-    transform: translateX(-100%);
-    animation: slideIn 1s forwards;
 }
 
 .text p {
     font-size: 1.125rem;
     font-weight: 200;
     margin-bottom: 0.7rem;
-    transform: translateX(-100%);
-    animation: slideIn 1s forwards;
+}
+
+.text p.visible {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .pic {
@@ -236,8 +237,6 @@ header {
 #recent-achievements h3 {
     font-size: 2rem;
     font-weight: 400;
-    transform: translateX(-100%);
-    animation: slideIn 1s forwards;
     color: var(--color-50);
     margin-bottom: 1.5rem;
     text-align: center;
@@ -281,7 +280,7 @@ header {
 
 .card p {
     padding: 1rem;
-    font-size: 1rem;
+    font-size: 0.85rem;
     color: var(--color-800);
     text-align: justify;
     flex: 1; 
@@ -429,10 +428,4 @@ footer a {
         font-size: 0.4rem;
     }
 
-}
-
-@keyframes slideIn {
-    to {
-        transform: translateX(0);
-    }
 }
