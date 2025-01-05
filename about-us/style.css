@@ -63,12 +63,12 @@ header {
 
 .desktop-nav li a {
     color: var(--color-800);
-    transition: font-weight 0.2s;
+    transition: font-weight 0.1s;
     margin-left: 1.5rem;
 }
 
 .desktop-nav li a:hover {
-    font-weight: bold; 
+    font-weight: 600; 
 }
 
 .menu-button {
