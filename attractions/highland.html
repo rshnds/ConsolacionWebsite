@@ -30,7 +30,11 @@
     <!-- Header (Visible Globally) -->
     <header class="bg-[#4C5024] py-4 relative w-full z-30">
         <div class="container mx-auto flex justify-between items-center px-4">
-            <div class="text-lg font-bold">Logo</div>
+            <div class="flex-shrink-0"> <a href="#">
+                    <img src="/attractions/images/lacion-logo-2.png" alt="Logo of Consolacion Tourism"
+                        class="h-10 w-auto">
+                </a>
+            </div>
             <nav class="space-x-10 hidden md:flex">
                 <a class="text-[#E5E5B1] hover:font-bold" href="/index.html">Home</a>
                 <a class="text-[#E5E5B1] hover:font-bold" href="/about-us/index.html">About Us</a>
@@ -69,7 +73,7 @@
                         <i class="fa-solid fa-arrow-left"></i>
                     </a>
                 </div>
-                <h1 class="text-5xl font-bold mt-4 tracking-wider">Highland Mango Ecofarm</h1>
+                <h1 class="text-5xl font-bold mt-4 tracking-wider uppercase">Highland Mango Ecofarm</h1>
                 <p class="mt-4 max-w-lg mx-auto">The Highland Mango Ecofarm is perfect for visitors to relax and chill
                     out. Take a trek in the forest, swim in the infinity pool, or simply breathe in the pure mountain
                     air.</p>
@@ -82,20 +86,53 @@
         <div class="bg-[#E5E5B1] py-1 relative w-full">
             <h2 class="text-2xl font-bold text-[#4C5024] py-4 text-center tracking-widest">Rates</h2>
         </div>
-        <div class="container mt-12 mx-auto px-20">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:bg-[#E5E5B1] hover:scale-105 transition">
-                <img src="./images/ecofarm-5.jpg" alt="Room in Greenland cabins" class="w-full h-96 object-cover">
-                <div class="p-6">
-                    <h3 class="text-center text-xl font-bold text-[#4C5024]">Exclusive Rates</h3>
-                    <p class="mt-2 text-sm text-[#4C5024]">Perhaps the greatest and closest glamping destination for you
-                        is the Greenland Cabins. With contemporary urban amenities like an air-conditioned glamping tent
-                        and a stunning swimming pool with a wooden lounge deck and bamboo canopy, it has the rustic
-                        simplicity of a campsite.</p>
-                    <ol class="text-[#4a4e1a] text-sm mt-4 space-y-2">
-                        <li class="list-none">P9,950 per night, suitable for <strong>8 persons</strong></li>
-                        <li class="list-none">P10,550 per night, suitable for <strong>10 persons</strong></li>
-                        <li class="list-none font-bold">They are open for exclusive use only.</li>
-                    </ol>
+        <div class="container mt-12 mx-auto px-4 pb-6">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- day use -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:bg-[#E5E5B1] hover:scale-105 transition">
+                    <img src="./images/ecofarm-5.jpg" alt="Kuma House" class="w-full h-96 object-cover">
+                    <div class="p-6">
+                        <!--day use fee-->
+                        <h3 class="text-center text-xl font-bold text-[#4C5024] font-bold">Day Use</h3>
+                        <ol class="text-[#4a4e1a] text-md mt-4 space-y-2"><strong>Open Hours</strong>
+                            <li class="list-none text-sm"> Mondays to Saturdays:10 AM to 6 PM</li>
+                            <li class="list-none text-sm">Sundays: 7 AM to 6 PM</li>
+                        </ol>
+                        <!--entrance fees-->
+                        <ol class="text-[#4a4e1a] text-md mt-4 space-y-2"><strong>Entrance Fee</strong>
+                            <li class="list-none text-sm">Adults: ₱50</li>
+                            <li class="list-none text-sm">Children below 8 years old and senior citizens: ₱25</li>
+                        </ol>
+                        <!--pool fees-->
+                        <ol class="text-[#4a4e1a] text-md mt-4 space-y-2"><strong>Pool Fee</strong>
+                            <li class="list-none text-sm">Adults: ₱150</li>
+                            <li class="list-none text-sm">Children below 8 years old and senior citizens: ₱75</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- cottage rates -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:bg-[#E5E5B1] hover:scale-105 transition">
+                    <img src="./images/highland-2.jpg" alt="Sasa House" class="w-full h-96 object-cover">
+                    <div class="p-6">
+                        <!--kubo-->
+                        <h3 class="text-center text-xl font-bold text-[#4C5024] font-bold">Cottage Rates</h3>
+                        <ol class="text-[#4a4e1a] text-md mt-4 space-y-2"><strong>Kubo Day Use</strong>
+                            <li class="list-none text-sm"> Mondays to Thursdays: ₱250</li>
+                            <li class="list-none text-sm">Fridays to Sundays:  ₱350</li>
+                        </ol>
+                        <!--cabin-->
+                        <ol class="text-[#4a4e1a] text-md mt-4 space-y-2"><strong>Cabin Day Use</strong>
+                            <li class="list-none text-sm">₱800 - suitable for 2 persons from 2 PM to 6 PM</li>
+                        </ol>
+                        <!--duplex-->
+                        <ol class="text-[#4a4e1a] text-md mt-4 space-y-2"><strong>Duplex (Ground Floor only) Day Use</strong>
+                            <li class="list-none text-sm">₱2,000 suitable for 4 hours</li>
+                            <li class="list-none text-sm">₱500 for every additional hour</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
@@ -138,7 +175,7 @@
                     <h3 class="text-xl font-bold text-[#4C5024] mb-4">Exact Location</h3>
                     <div class="relative w-full rounded-lg overflow-hidden mb-6">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.309302168928!2d123.95508407376958!3d10.396990266080458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9a366309d96a7%3A0x685ee478bd1c441e!2sThe%20Greenland%20Cabins!5e0!3m2!1sen!2sph!4v1735370941585!5m2!1sen!2sph"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.9708367147605!2d123.91987067377008!3d10.423888865600013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9a3493cc2bb4f%3A0xa2cb1c8999c0f659!2sHighland%20Mango%20Ecofarm!5e0!3m2!1sen!2sph!4v1736059629817!5m2!1sen!2sph"
                             width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade" class="w-full h-full border-0"></iframe>
                     </div>
