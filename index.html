@@ -5,13 +5,14 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>
-        Landing Page
+        Consolacion
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/535926b96b.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Outfit', sans-serif;
@@ -19,16 +20,20 @@
     </style>
 </head>
 
-<body class="relative overflow-hidden bg-[#E5E5B1]">
+<body class="relative bg-[#E5E5B1]">
     <!-- Header (Visible Globally) -->
     <header class="bg-[#E5E5B1] bg-opacity-80 py-4 fixed w-full z-30">
         <div class="container mx-auto flex justify-between items-center px-4">
-            <div class="text-lg font-bold">Logo</div>
+            <div class="flex-shrink-0"> <a href="#">
+                    <img src="/attractions/images/lacion-logo-1.png" alt="Logo of Consolacion Tourism"
+                        class="h-10 w-auto">
+                </a>
+            </div>
             <nav class="space-x-10 hidden md:flex">
                 <a class="text-[#4C5024] hover:font-bold" href="#">Home</a>
                 <a class="text-[#4C5024] hover:font-bold" href="about-us/index.html">About Us</a>
                 <a class="text-[#4C5024] hover:font-bold" href="attractions/index.html">Attractions</a>
-                <a class="text-[#4C5024] hover:font-bold" href="/events-festival/index.html">Events</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Events</a>
                 <a class="text-[#4C5024] hover:font-bold" href="#">Culture</a>
                 <a class="text-[#4C5024] hover:font-bold" href="#">Contact</a>
             </nav>
@@ -44,7 +49,7 @@
                 <a class="text-[#4C5024] hover:font-bold" href="#">Home</a>
                 <a class="text-[#4C5024] hover:font-bold" href="about-us/index.html">About Us</a>
                 <a class="text-[#4C5024] hover:font-bold" href="attractions/index.html">Attractions</a>
-                <a class="text-[#4C5024] hover:font-bold" href="/events-festival/index.html">Events</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Events</a>
                 <a class="text-[#4C5024] hover:font-bold" href="#">Culture</a>
                 <a class="text-[#4C5024] hover:font-bold" href="#">Contact</a>
             </nav>
@@ -52,7 +57,7 @@
     </header>
 
     <!-- First Section with Video Background -->
-    <div class="relative h-screen">
+    <div class="relative h-screen pt-20">
         <!-- Video Background -->
         <video class="absolute inset-0 object-cover w-full h-full" autoplay loop muted playsinline>
             <source src="consolacion.mp4" type="video/mp4">
@@ -64,27 +69,117 @@
         <main
             class="container mx-auto px-4 py-16 relative z-10 flex flex-col items-center justify-center h-full text-center">
             <div class="text-[#F9F9EC] px-4 md:px-0">
-                <span class="text-4xl md:text-5xl tracking-wide font-extrabold block">
-                    WELCOME TO CONSOLACION
+                <span class="text-3xl md:text-5xl tracking-wide font-light block">
+                    Welcome to <span class="text-5xl md:text-6xl"
+                        style="font-family: 'Permanent Marker', serif;">Consolacion
+                    </span> Cebu
                 </span>
-                <p id="dynamic-description" class="text-lg mt-4 mx-20 tracking-wider">
-                    Consolacion has something for everyone, whether you’re searching for a tranquil retreat or an
-                    exciting vacation.
-                </p>
                 <button id="dynamic-button" onclick="secondSection()"
                     class="mt-6 px-6 py-3 bg-transparent text-[#E5E5B1] border-2 border-[#E5E5B1] font-bold rounded-full hover:bg-[#4C5024] hover:text-[#E5E5B1] hover:scale-110 transition">
                     Start Your Journey
                 </button>
-            </div>
+                <p class="text-md mt-4 mx-2 tracking-wider">
+                    Consolacion has something for everyone, whether you’re searching for a tranquil retreat or an
+                    exciting vacation.
+                </p>
+                <hr class="border-t border-gray-300 my-8 mx-auto w-full max-w-3xl" />
+                <div class="grid grid-cols-3 gap-6 mt-10 mx-auto text-sm">
+                    <div>
+                        <p class="font-bold">Most Popular Activity</p>
+                        Trekking
+                    </div>
+                    <div>
+                        <p class="font-bold">A Place To Connect with Nature</p>
+                        Wooloo Resort
+                    </div>
+                    <div>
+                        <p class="font-bold">Food You'd Drool For</p>
+                        Fresh Talaba
+                    </div>
+
+                </div>
         </main>
     </div>
 
     <!-- Second Section -->
-    <section id="journey-section" class="min-h-screen bg-[#4C5024] flex items-center justify-center text-center">
-        <div class="text-[#E5E5B1]">
-            <h2 class="text-4xl font-extrabold">Welcome to Your Journey</h2>
-            <p class="mt-4 text-lg">Explore the beauty and attractions of Consolacion.</p>
+    <section id="journey-section"
+        class="min-h-screen flex flex-col items-center justify-center text-center bg-[#E5E5B1] bg-gradient-to-t from-[hsla(69,45%,12%,1.0)] via-[hsla(69,45%,12%, 0.4)] to-transparent opacity-0 translate-y-10 transition-all duration-700"
+        data-animation="true">
+        <h1 class="text-4xl text-[#4C5024] opacity-0 translate-y-10 transition-all duration-700 delay-600"
+            style="font-family: 'Permanent Marker', serif;">
+            Explore The Gateway to the North
+        </h1>
+        <p class="mt-4 text-lg text-[#4C5024] opacity-0 translate-y-10 transition-all duration-700 delay-600">Explore
+            the beauty and attractions of Consolacion.</p>
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 mt-10 px-4 opacity-0 translate-y-10 transition-all duration-700 delay-600">
+
+            <!--Food-->
+            <a href="#" class="relative group block rounded-lg overflow-hidden shadow-lg mx-2 hover:border-4 border-[#E5E5B1] hover:scale-110 transition">
+                <img src="images/food-1050813_1280.jpg" alt="Food And Culture" class="w-full h-48 object-cover">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 group-hover:opacity-80 transition-opacity duration-300">
+                </div>
+                <span
+                    class="absolute inset-x-0 bottom-0 text-white text-center font-semibold text-lg opacity-5 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                    Food And Culture
+                </span>
+            </a>
+
+            <!-- Events And Festival -->
+            <a href="#" class="relative group block rounded-lg overflow-hidden shadow-lg mx-2 hover:border-4 border-[#E5E5B1] hover:scale-110 transition">
+                <img src="images/sarok.jpg" alt="Food And Culture" class="w-full h-48 object-cover">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 group-hover:opacity-80 transition-opacity duration-300">
+                </div>
+                <span
+                    class="absolute inset-x-0 bottom-0 text-white text-center font-semibold text-lg opacity-5 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                    Events and Festival
+                </span>
+            </a>
+
+
+            <!-- Attractions -->
+            <a href="/attractions/index.html"
+                class="relative group block rounded-lg overflow-hidden shadow-lg mx-2 hover:border-4 border-[#E5E5B1] hover:scale-110 transition">
+                <img src="images/kahoycafe.jpg" alt="Attractions" class="w-full h-48 object-cover">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 group-hover:opacity-80 transition-opacity duration-300">
+                </div>
+                <span
+                    class="absolute inset-x-0 bottom-0 text-white text-center font-semibold text-lg opacity-5 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                    Attractions
+                </span>
+            </a>
+
+            <!-- About Us -->
+            <a href="#"
+                class="relative group block rounded-lg overflow-hidden shadow-lg mx-2 hover:border-4 border-[#E5E5B1] hover:scale-110 transition">
+                <img src="/images/about.jpg" alt="About Us" class="w-full h-48 object-cover">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 group-hover:opacity-80 transition-opacity duration-300">
+                </div>
+                <span
+                    class="absolute inset-x-0 bottom-0 text-white text-center font-semibold text-lg opacity-5 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                    About Us
+                </span>
+            </a>
         </div>
+    </section>
+
+    <!--3rd section-->
+    <section
+        class="min-h-screen flex flex-col items-center justify-center text-center bg-[#E5E5B1] bg-gradient-to-b from-[hsla(69,45%,12%,1.0)] via-[hsla(69,45%,12%, 0.4)] to-transparent pointer-events-none">
+        <h2 class="text-4xl text-[#E5E5B1]" style="font-family: 'Permanent Marker', serif;">Things to do in Consolacion
+        </h2>
+        <p class="text-[#4C5024] mt-4">Consolacion offers akulanggggg </p>
+    </section>
+
+    <!--last section-->
+    <section
+        class="min-h-screen flex flex-col items-center justify-center text-center bg-[#E5E5B1] bg-gradient-to-t from-[#4C5024] via-[hsla(69,45%,12%, 0.4)] to-transparent pointer-events-none">
+        <h2 class="text-4xl text-[#E5E5B1]" style="font-family: 'Permanent Marker', serif;">Things to do in Consolacion
+        </h2>
+        <p class="text-[#4C5024] mt-4">Consolacion offers akulanggggg </p>
     </section>
 
     <!-- Mobile Menu Toggle Script -->

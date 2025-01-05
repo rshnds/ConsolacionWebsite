@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Food and Culture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        html {
+        scroll-behavior: smooth;
+    }
+
+    </style>
+</head>
+<body class="h-screen bg-[url('wooloo-3_upscaled.jpg')] bg-cover bg-center relative;">
+    <header class="bg-[#E5E5B1] bg-opacity-80 py-4 relative z-20">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-lg font-bold">
+                Logo
+            </div>
+            <nav class="space-x-10 hidden md:flex">
+                <a class="text-[#4C5024] hover:font-bold" href="/index.html">Home</a>
+                <a class="text-[#4C5024] hover:font-bold" href="/about-us/index.html">About Us</a>
+                <a class="text-[#4C5024] hover:font-bold" href="/attractions/index.html">Attractions</a>
+                <a class="text-[#4C5024] hover:font-bold" href="/events-festival/index.html">Events and Festival</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Food and Culture</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-green-900 focus:outline-none" id="menu-button"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <nav class="flex flex-col space-y-4 mt-4 px-4">
+                <a class="text-[#4C5024] hover:font-bold" href="/index.html">Home</a>
+                <a class="text-[#4C5024] hover:font-bold" href="/about-us/index.html">About Us</a>
+                <a class="text-[#4C5024] hover:font-bold" href="/attractions/index.html">Attractions</a>
+                <a class="text-[#4C5024] hover:font-bold" href="/events-festival/index.html">Events and Festival</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Food and Culture</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="relative">
+            <img alt="background foods and culture" class="w-full h-auto" src="images\food n culture.jpg"/>
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start text-left px-4 md:px-16">
+                <h1 class="text-4xl md:text-6xl text-white font-bold">
+                    From Our Kitchen<br/>
+                    To Your Heart
+                </h1>
+                <p class="text-lg md:text-xl text-white mt-4">
+                    Consolacion: A taste of tradition, where rich flavors meet vibrant culture.
+                </p>
+                <div class="mt-6 space-x-4">
+                    <a href="#foods-section" class="bg-yellow-200 text-green-800 px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition duration-200">
+                        Foods
+                    </a>                    
+                    <a href="#culture-section" class="bg-yellow-200 text-green-800 px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition duration-200">
+                        Culture
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    
+        <section id="foods-section" class="bg-white py-16"> 
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-green-800 mb-12">Discover Local Cuisine</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                        <img alt="Local Dish 1" class="rounded-lg w-full h-48 object-cover mb-4" src="images/dish1.jpg"/>
+                        <h3 class="text-xl font-semibold text-green-800 mb-2">Lechon Kawali</h3>
+                        <p class="text-gray-700">Crispy and savory, this dish is a crowd favorite in Consolacion.</p>
+                    </div>
+                    <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                        <img alt="Local Dish 2" class="rounded-lg w-full h-48 object-cover mb-4" src="images/dish2.jpg"/>
+                        <h3 class="text-xl font-semibold text-green-800 mb-2">Sinuglaw</h3>
+                        <p class="text-gray-700">A perfect mix of grilled pork and ceviche, highlighting local flavors.</p>
+                    </div>
+                    <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                        <img alt="Local Dish 3" class="rounded-lg w-full h-48 object-cover mb-4" src="images/dish3.jpg"/>
+                        <h3 class="text-xl font-semibold text-green-800 mb-2">Puso (Hanging Rice)</h3>
+                        <p class="text-gray-700">Enjoy this unique Cebuano rice preparation with any dish!</p>
+                    </div>
+                </div>
+                
+                <h2 class="text-4xl font-bold text-center text-green-800 mt-16 mb-12">Popular Dining Spots</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                        <img alt="Spot 1" class="rounded-lg w-full h-48 object-cover mb-4" src="images/spot1.jpg"/>
+                        <h3 class="text-xl font-semibold text-green-800 mb-2">Consolacion Food Hub</h3>
+                        <p class="text-gray-700">A vibrant spot for local street food and delicacies.</p>
+                    </div>
+                    <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                        <img alt="Spot 2" class="rounded-lg w-full h-48 object-cover mb-4" src="images/spot2.jpg"/>
+                        <h3 class="text-xl font-semibold text-green-800 mb-2">Haven's Kitchen</h3>
+                        <p class="text-gray-700">A cozy place serving modern takes on traditional Filipino dishes.</p>
+                    </div>
+                    <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                        <img alt="Spot 3" class="rounded-lg w-full h-48 object-cover mb-4" src="images/spot3.jpg"/>
+                        <h3 class="text-xl font-semibold text-green-800 mb-2">Lola's Tapsilogan</h3>
+                        <p class="text-gray-700">Known for its affordable meals and heartwarming service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="culture-section" class="bg-white py-16">
+            <div class="relative">
+                <!-- Main Display -->
+                <img id="background-image" 
+                    alt="A person making a traditional woven hat in a dimly lit room" 
+                    class="w-full h-screen object-cover" 
+                    src="https://storage.googleapis.com/a1aa/image/2HWYgaopNzq5AdAv4HRtEE2pIRJ2FvjI0qWRPgpWJlieNq8JA.jpg"
+                />
+        
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start p-8">
+                    <!-- Main Title -->
+                    <h1 id="main-title" class="text-4xl font-bold mb-4">SAROK MAKING</h1>
+                    
+                    <!-- Main Description -->
+                    <p id="main-description" class="text-lg max-w-md mb-8">
+                        is a traditional woven hat from Consolacion, Cebu. Made from bamboo strips and banana leaves, it's known for its distinct conical shape and craftsmanship. Originally used for protection from the sun and rain, the Sarok symbolizes Consolacion's rich cultural heritage and resilience.
+                    </p>
+                    
+                    <!-- Thumbnails -->
+                    <div class="flex space-x-4">
+                        <!-- North Peak Cafe Thumbnail -->
+                        <div class="relative cursor-pointer" onclick="swapContent('north-peak')">
+                            <img id="north-peak-thumbnail" 
+                                alt="North Peak Cafe" 
+                                class="w-32 h-32 object-cover rounded-lg" 
+                                src="https://storage.googleapis.com/a1aa/image/EZYGqBbxKJ7lAxY5fKFzCSFrH1qbOXbDiaLfM3xfxoJu3oynA.jpg"
+                            />
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg">
+                            </div>
+                        </div>
+        
+                        <!-- Greenland Cabins Thumbnail -->
+                        <div class="relative cursor-pointer" onclick="swapContent('greenland')">
+                            <img id="greenland-thumbnail" 
+                                alt="Greenland Cabins" 
+                                class="w-32 h-32 object-cover rounded-lg" 
+                                src="https://storage.googleapis.com/a1aa/image/5L5SRd4e0WV4MiDTElbdJTcF9uzF6Efvyle0iZ21vTKy3oynA.jpg"
+                            />
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            // Data for each section
+            const contentData = {
+                "sarok-making": {
+                    title: "SAROK MAKING",
+                    description: "is a traditional woven hat from Consolacion, Cebu. Made from bamboo strips and banana leaves, it's known for its distinct conical shape and craftsmanship. Originally used for protection from the sun and rain, the Sarok symbolizes Consolacion's rich cultural heritage and resilience.",
+                    image: "https://storage.googleapis.com/a1aa/image/2HWYgaopNzq5AdAv4HRtEE2pIRJ2FvjI0qWRPgpWJlieNq8JA.jpg",
+                },
+                "north-peak": {
+                    title: "NORTH PEAK CAFE",
+                    description: "North Peak Cafe is a cozy spot offering a variety of delicious meals and beverages. It is known for its serene ambiance and beautiful views.",
+                    image: "https://storage.googleapis.com/a1aa/image/EZYGqBbxKJ7lAxY5fKFzCSFrH1qbOXbDiaLfM3xfxoJu3oynA.jpg",
+                },
+                "greenland": {
+                    title: "GREENLAND CABINS",
+                    description: "Greenland Cabins provide a peaceful retreat surrounded by nature. It is the perfect place to relax and unwind, offering comfortable accommodations and scenic beauty.",
+                    image: "https://storage.googleapis.com/a1aa/image/5L5SRd4e0WV4MiDTElbdJTcF9uzF6Efvyle0iZ21vTKy3oynA.jpg",
+                },
+            };
+        
+            // Swap content function
+            function swapContent(location) {
+                // Get the data for the clicked location
+                const clickedData = contentData[location];
+        
+                // Update the main display elements with the clicked content
+                document.getElementById('background-image').src = clickedData.image;
+                document.getElementById('main-title').textContent = clickedData.title;
+                document.getElementById('main-description').textContent = clickedData.description;
+        
+                // Update thumbnails with the original content data
+                const currentData = contentData['sarok-making'];
+                if (location === 'north-peak') {
+                    // Swap the Sarok Making thumbnail with North Peak
+                    document.getElementById('north-peak-thumbnail').src = currentData.image;
+                    contentData['north-peak'] = currentData;
+                } else if (location === 'greenland') {
+                    // Swap the Sarok Making thumbnail with Greenland
+                    document.getElementById('greenland-thumbnail').src = currentData.image;
+                    contentData['greenland'] = currentData;
+                }
+        
+                // Update the contentData object with the current changes
+                contentData['sarok-making'] = clickedData;
+            }
+        </script>
+        
+
+<script>
+    document.getElementById('menu-button').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>
+
+

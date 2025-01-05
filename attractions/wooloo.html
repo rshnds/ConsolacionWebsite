@@ -15,6 +15,15 @@
         body {
             font-family: 'Outfit', sans-serif;
         }
+
+        .carousel img {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .carousel img.active {
+            opacity: 1;
+        }
     </style>
 
 <body class="relative">
@@ -49,90 +58,137 @@
         </div>
     </header>
 
-    <!--first section-->
-    <section class="container mx-auto px-4 py-16 relative z-10">
-        <div class="flex flex-wrap justify-center items-center mt-10 max-w-screen-lg mx-auto">
-            <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg flex flex-wrap space-y-6 md:space-y-0">
-                <!-- Image Section -->
-                <div class="relative w-full md:w-1/2 px-4">
-                    <img alt="A beautiful Wooloo resort with a scenic view"
-                        class="rounded-lg w-full h-auto object-cover " src="images/wooloo-1.jpg" />
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-[60vh]" style="background-image: url('./images/woloo-13.jpg');">
+        <div class="absolute inset-0 bg-[#292D11] bg-opacity-40 flex items-center justify-center">
+            <div class="text-center text-white">
+                <div class="absolute top-6 left-6">
+                    <!--back button-->
+                    <a href="/attractions/index.html"
+                        class="inline-block bg-[#E5E5B1] bg-opacity-70 text-[#4C5024] py-2 px-6 rounded-full shadow-md hover:bg-[#E5E5B1] transition">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
                 </div>
-                <!-- Content Section -->
-                <div class="w-full md:w-1/2 max-w-md flex justify-between mb-4 md:mb-0">
-                    <p class="text-[#4a4e1a] mt-2 ml-5 md:mt-10">
-                        <strong>Woolo</strong> is a boutique resort perched on top of the Consolacion mountains.
-                        This eco-friendly,bamboo-clad resort is perfect for disconnecting from the world and becoming
-                        one with nature.
-                        It boasts unimpeded countryside views and its lush greenery, plus a peek into the Cebu City
-                        skyline.
-                    </p>
+                <h1 class="text-5xl font-bold mt-4 tracking-wider">WOOLOO RESORT</h1>
+                <p class="mt-4 max-w-lg mx-auto">Escape to a tranquil haven surrounded by nature, where relaxation and
+                    comfort come together in harmony.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Houses and Rates Section -->
+    <section>
+        <div class="bg-[#E5E5B1] py-1 relative w-full">
+            <h2 class="text-2xl font-bold text-[#4C5024] py-4 text-center tracking-widest">Houses and Rates</h2>
+        </div>
+        <div class="container mt-12 mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Kuma -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:bg-[#E5E5B1] hover:scale-105 transition">
+                    <img src="./images/wooloo-kumu.jpg" alt="Kuma House" class="w-full h-96 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-center text-xl font-bold text-[#4C5024]">Kuma</h3>
+                        <p class="mt-2 text-md text-[#4C5024]">Kuma is perfect for big groups. The
+                            small cottage has six double-deck beds,
+                            a mini-fridge, and a small wading pool on the outside.</p>
+                        <ol class="text-[#4a4e1a] text-sm mt-4 space-y-2">
+                            <li class="list-none">Weekdays (Monday to Thursday) - Php 7,888</li>
+                            <li class="list-none">Weekends (Friday to Sunday and Holiday) - Php 9,888</li>
+                            <li class="list-none">Rates are good for 6 persons with brunch for 6</li>
+                            <li class="list-none">Extra brunch - Php 180 (Plated)</li>
+                            <li class="list-none">Extra Person - Php 588 (With Mattress), Php 388 (Without Mattress)
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- Sasa -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:bg-[#E5E5B1] hover:scale-105 transition">
+                    <img src="./images/wooloo-sasa2.jpg" alt="Sasa House" class="w-full h-96 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-center text-xl font-bold text-[#4C5024]">Sasa</h3>
+                        <p class="mt-2 text-md text-[#4C5024]">Sasa is appropriate for couples or those with
+                            small families looking to unwind
+                            and reconnect.</p>
+                        <ol class="text-[#4a4e1a] text-sm mt-4 space-y-2">
+                            <li class="list-none">Weekdays (Monday to Thursday) - Php 6,888</li>
+                            <li class="list-none">Weekends (Friday to Sunday and Holiday) - Php 8,888</li>
+                            <li class="list-none">Rates are good for 4 persons with brunch for 4</li>
+                            <li class="list-none">Extra brunch - Php 180 (Plated)</li>
+                            <li class="list-none">Extra Person - Php 588 (With Mattress), Php 388 (Without Mattress)
+                            </li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--second section(Kuma)-->
-    <section class="container mx-auto px-4 py-16 relative z-10">
-        <div class="flex flex-wrap justify-center items-center mt-10 max-w-screen-lg mx-auto">
-            <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg flex flex-wrap space-y-6 md:space-y-0">
-                <!-- Image Section -->
-                <div class="relative w-full md:w-1/2 px-4">
-                    <h1 class="text-3xl text-[#4a4e1a] font-bold text-center">Kuma</h1>
-                    <h4 class="text-sm text-[#4a4e1a] font-medium text-center pb-2">(House 1)</h4>
-                    <img alt="A beautiful Wooloo resort with a scenic view"
-                        class="rounded-lg w-full h-auto object-cover " src="images/wooloo-kumu.jpg" />
-                </div>
-                <!-- Content Section -->
-                <div class="w-full md:w-1/2 px-4">
-                    <p class="text-[#4a4e1a] mt-2 md:mt-14">
-                        <strong>Kuma</strong> is perfect for big groups. The small cottage has six double-deck beds, 
-                        a mini-fridge, and a small wading pool on the outside.
-                    </p>
-                    <ol class="text-[#4a4e1a] text-light mt-4 space-y-2">
-                        <li class="list-none">Weekdays (Monday to Thursday) - Php 7,888</li>
-                        <li class="list-none">Weekends (Friday to Sunday and Holiday) - Php 9,888</li>
-                        <li class="list-none">Rates are good for 6 persons with brunch for 6</li>
-                        <li class="list-none">Extra brunch - Php 180 (Plated)</li>
-                        <li class="list-none">Extra Person - Php 588 (With Mattress), Php 388 (Without Mattress)</li>
-                    </ol>
-                </div>
+    <!-- Gallery Section -->
+    <section class="mt-6">
+        <div class="bg-[#4C5024] py-1 relative w-full">
+            <h2 class="text-2xl font-bold text-[#E5E5B1] py-4 text-center tracking-widest">Gallery</h2>
+        </div>
+        <div class="container mt-10 mx-auto px-4">
+            <div class="carousel relative overflow-hidden rounded-lg shadow-lg">
+                <img src="./images/wooloo-2.jpg" alt="Gallery Image 2" class="w-full h-96 object-cover rounded-lg">
+                <img src="./images/wooloo-5.jpg" alt="Gallery Image 3"
+                    class="absolute inset-0 w-full h-96 object-cover rounded-lg">
+                <img src="./images/woloo-6.jpg" alt="Gallery Image 4"
+                    class="absolute inset-0 w-full h-96 object-cover rounded-lg">
+                <img src="./images/wooloo-7.jpg" alt="Gallery Image 5"
+                    class="absolute inset-0 w-full h-96 object-cover rounded-lg">
+                <img src="./images/woloo-8.jpg" alt="Gallery Image 6"
+                    class="absolute inset-0 w-full h-96 object-cover rounded-lg">
+                <img src="./images/woloo-9.jpg" alt="Gallery Image 7"
+                    class="absolute inset-0 w-full h-96 object-cover rounded-lg">
+                <img src="./images/woloo-10.jpg" alt="Gallery Image 8"
+                    class="absolute inset-0 w-full h-96 object-cover rounded-lg">
+                <img src="./images/woloo-11.jpg" alt="Gallery Image 9"
+                    class="absolute inset-0 w-full h-96 object-cover rounded-lg">
+                <img src="./images/woloo-12.jpg" alt="Gallery Image 10"
+                    class="absolute inset-0 w-full h-96 object-cover rounded-lg">
             </div>
         </div>
     </section>
 
-    <!--third section(Sasa)-->
-    <section class="container mx-auto px-4 py-16 relative z-10">
-        <div class="flex flex-wrap justify-center items-center mt-10 max-w-screen-lg mx-auto">
-            <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg flex flex-wrap space-y-6 md:space-y-0">
-                <!-- Image Section -->
-                <div class="relative w-full md:w-1/2 px-4">
-                    <h1 class="text-3xl text-[#4a4e1a] font-bold text-center">Sasa</h1>
-                    <h4 class="text-sm text-[#4a4e1a] font-medium text-center pb-2">(House 2)</h4>
-                    <img alt="A house made of bamboo" class="rounded-lg w-full h-auto object-cover "
-                        src="images/wooloo-sasa2.jpg" />
-                </div>
-                <!-- Content Section -->
-                <div class="w-full md:w-1/2 px-4">
-                    <p class="text-[#4a4e1a] mt-2 md:mt-14">
-                        <strong>Sasa</strong> is appropriate for couples or those with small families looking to unwind and reconnect.
-                        The two-story structure houses a living common living space and wading pool on the ground floor, while the second floor is dedicated for sleepig area. 
-                    </p>
-                    <ol class="text-[#4a4e1a] text-light mt-4 space-y-2">
-                        <li class="list-none">Weekdays (Monday to Thursday) - Php 6,888</li>
-                        <li class="list-none">Weekends (Friday to Sunday and Holiday) - Php 8,888</li>
-                        <li class="list-none">Rates are good for 4 persons with brunch for 4</li>
-                        <li class="list-none">Extra brunch - Php 180 (Plated)</li>
-                        <li class="list-none">Extra Person - Php 588 (With Mattress), Php 388 (Without Mattress)</li>
-                    </ol>
+    <!-- Location Section -->
+    <section class="py-12">
+        <div class="bg-[#E5E5B1] py-1 relative w-full">
+            <h2 class="text-2xl font-bold text-[#4C5024] py-4 text-center tracking-widest">How to Get There?</h2>
+        </div>
+        <div class="mt-10 container mx-auto px-4">
+            <div class="bg-[#E5E5B1] rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#4C5024] mb-4">Exact Location</h3>
+                    <div class="relative w-full rounded-lg overflow-hidden mb-6">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.9355810414027!2d123.93807377377001!3d10.42668676554995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9a3299178adb1%3A0x6452afadb369f274!2sWooloo!5e0!3m2!1sen!2sph!4v1734782314504!5m2!1sen!2sph"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="w-full h-full border-0"></iframe>
+                    </div>
+                    <p class="mt-4 text-[#4C5024]"><strong>By Commute:</strong> Take any Northbound bus or jeepney and
+                        alight at
+                        Food Saversmart Consolacion, where you can hire a habal-habal (motorcycle taxi, ₱100, 30
+                        minutes) to take you to Barangay Garing. </p>
+                    <p class="mt-4 text-[#4C5024]"><strong>By Car:</strong> If coming from the northern parts of the
+                        metropolis
+                        like Mandaue City,the best way to get to Wooloo is via consolacion town Proper.  If coming
+                        from Cebu City, one can also get to Barangay Garing, Consolacion from Barangay Pit-os, Cebu
+                        City. Use Google Maps to navigate</p>
                 </div>
             </div>
         </div>
     </section>
+    <!--Back to top button-->
+    <button id="back-to-top"
+        class="hidden fixed bottom-6 right-6 bg-[#4C5024] text-[#E5E5B1] py-2 px-4 rounded-lg shadow-lg hover:bg-[#6F7743] transition">↑</button>
 
+    <footer class="bg-[#4C5024] text-[#E5E5B1] py-4 text-center">
+        &copy; 2024 Wooloo Resort. All rights reserved.
+    </footer>
 
-
-    <!--script-->
     <script>
         const menuButton = document.getElementById('menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -140,6 +196,43 @@
         // Toggle mobile menu visibility
         menuButton.addEventListener('click', function () {
             mobileMenu.classList.toggle('hidden');
+        });
+        const carouselItems = document.querySelectorAll(".carousel img");
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            carouselItems.forEach((img, i) => {
+                img.classList.toggle("active", i === index);
+            });
+        }
+
+        // Auto-slide every 5 seconds
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            showSlide(currentIndex);
+        }, 5000);
+
+        // Initialize
+        showSlide(currentIndex);
+
+        //for back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        // Show or hide the button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) { // Adjust value as needed
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+
+        // Smooth scroll to the top when the button is clicked
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
 
     </script>
