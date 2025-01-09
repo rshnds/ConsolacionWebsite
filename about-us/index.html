@@ -19,6 +19,9 @@
         <!--Using Font Awesome (emoji)-->
         <script src="https://kit.fontawesome.com/dfea7a45e9.js" crossorigin="anonymous"></script>
 
+        <!--Linking Tailwind-->
+        <script src="https://cdn.tailwindcss.com"></script>
+
         <!--Linking CSS-->
         <link rel="stylesheet" href="/about-us/style.css">
 
@@ -29,8 +32,10 @@
 
     <body>
         <header>
-            <div class="logo">
-                <img src="/attractions/images/lacion-logo-1.png" alt="Logo of Consolacion Tourism">
+            <div class="logo"> 
+                <a href="#">
+                    <img src="/attractions/images/lacion-logo-1.png" alt="Logo of Consolacion Tourism">
+                </a>
             </div>
             <button class="menu-button" id="menu-toggle"><i class="fas fa-bars"></i></button>
             <nav class="desktop-nav" id="nav-menu">
@@ -38,9 +43,9 @@
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="/attractions/index.html">Attractions</a></li>
-                    <li><a href="/events-festival/index.html">Events</a></li>
-                    <li><a href="/final_proj/food_and_culture.html">Culture</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/dif/final.html">Events</a></li>
+                    <li><a href="/food-culture/index.html">Culture</a></li>
+                    <li><a href="/dif/contacts.html">Contact</a></li>
                 </ul>                
             </nav>
         </header>
@@ -185,12 +190,53 @@
             </section>
         </main>
         
-        <footer>
-            <p>Consolacion is the perfect starting point to explore the treasures of northern Cebu.
-                Plan your visit now!
-                <a href="https://www.facebook.com/profile.php?id=61555137257374" target="_blank">OFFICIAL FB PAGE</a>
-            </p>
+        <footer class="custom-footer">
+            <div class="custom-footer-container">
+                <div class="custom-footer-column">
+                    <h3 class="custom-footer-logo pb-3">PaVic<span class="font-bold">Team</span></h3>
+                    <img src="/images/footer-logo.png" alt="Footer Decoration" class="custom-footer-image" />
+                </div>
+                <div class="custom-footer-column custom-footer-links">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about-us/index.html">About us</a></li>
+                        <li><a href="/attractions/index.html">Attractions</a></li>
+                        <li><a href="/dif/final.html">Events and Festival</a></li>
+                        <li><a href="/food-culture/index.html">Food and Culture</a></li>
+                    </ul>
+                </div>
+                <div class="custom-footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Consolacion, Cebu, Philippines</li>
+                        <li>+123 456 7890</li>
+                    </ul>
+                </div>
+                <div class="custom-footer-column">
+                    <h3>Quick Link</h3>
+                    <ul>
+                        <li><a href="#">Style Guide</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Help Text</a></li>
+                    </ul>
+                </div>
+                <div class="custom-footer-column">
+                    <h3>Social Share</h3>
+                    <div class="custom-footer-social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61555137257374/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/o58277"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/kristofergerard-bayon-on-760250296/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-footer-bottom">
+                <p>&copy; Copyright 2024. Powered by <a href="#">PaVic<span class="font-bold">Team</span></a></p>
+            </div>
         </footer>
+
+        <!--Back to top button-->
+        <button id="back-to-top"
+        class="hidden fixed bottom-6 right-6 bg-[#4C5024] text-[#E5E5B1] py-2 px-4 rounded-lg shadow-lg hover:bg-[#6F7743] transition z-50">↑</button>
 
     </body>
 </html>
