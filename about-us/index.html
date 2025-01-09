@@ -1,5 +1,3 @@
-<!--About Us Page by Rosheen-->
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -30,104 +28,157 @@
     </head>
 
     <body>
-        <header class="navbar">
-            <div class="container">
-                <div class="logo">Logo</div>
-                <nav class="desktop-nav">
-                    <a href="/index.html" class="nav-link">Home</a>
-                    <a href="#" class="nav-link">About Us</a>
-                    <a href="/attractions/index.html" class="nav-link">Attractions</a>
-                    <a href="/events-festival/index.html" class="nav-link">Events</a>
-                    <a href="/final_proj/food_and_culture.html" class="nav-link">Food & Culture</a>
-                    <a href="#" class="nav-link">Contact</a>
-                </nav>
-                <button class="menu-button" id="menu-toggle"><i class="fas fa-bars"></i></button>
-            </div>
-            <nav class="mobile-nav" id="mobile-nav">
-                <a href="/index.html" class="nav-link">Home</a>
-                <a href="#" class="nav-link">About Us</a>
-                <a href="/attractions/index.html" class="nav-link">Attractions</a>
-                <a href="/events-festival/index.html" class="nav-link">Events</a>
-                <a href="#" class="nav-link">Food & Culture</a>
-                <a href="#" class="nav-link">Contact</a>
+        <header>
+            <div class="logo"><a href="#start">Logo</a></div>
+            <button class="menu-button" id="menu-toggle"><i class="fas fa-bars"></i></button>
+            <nav class="desktop-nav" id="nav-menu">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="/attractions/index.html">Attractions</a></li>
+                    <li><a href="/events-festival/index.html">Events</a></li>
+                    <li><a href="/final_proj/food_and_culture.html">Culture</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>                
             </nav>
         </header>
                   
         <main> 
-            <section id="sec1">
+            <section id="hero-section">
                 <div class="content">
-                    <h3>MUNICIPALITY OF CONSOLACION</h3>
-                    <hr>
-                    <h1>The Gateway to the North</h1>
-                    <p>Nestled between the vibrant urban hubs of Cebu City and Mandaue, the Municipality of Consolacion offers a serene retreat just minutes away from the bustling metropolis.</p>
+                    <h3><i class="fa-solid fa-arrow-right" style="font-size: 1rem; padding-right: 1rem;"></i>
+                        The Gateway to the North</h3>
+                    <h1>MUNICIPALITY OF CONSOLACION</h1>
+                    <p>Nestled between the vibrant urban hubs of Cebu City and Mandaue,
+                        the Municipality of Consolacion offers a serene retreat just minutes 
+                        away from the bustling metropolis.</p>
                 </div>
             </section>
             
-            
-            <section id="sec2">
-                <div class="text">
-                    <h3>From Kampi-ig to Consolacion</h3>
-                    <p>Once a quiet barrio called Kampi-ig, Consolacion has grown into a bustling municipality with a story of resilience.</p>
-                    <p>Originally part of Mandaue, it became an independent town in 1871, only to face challenges that led to its 
-                    reintegration with Mandaue in the early 1900s.</p>
-                    <p>Through determination, the people petitioned for independence, and in 1920, Consolacion was reborn as a 
-                    municipality. It was named in honor of the governor’s daughter.</p>
-                    
-                </div>
+            <section class="media" id="media-1">
                 <div class="pic">
                     <img src="/about-us/images/san_narciso_church.jpg" alt="San Narciso Parish of Consolacion, Cebu">
                 </div>
+                <div class="text">
+                    <h3>From Kampi-ig to Consolacion</h3>
+                    <p>
+                        Once a quiet barrio called Kampi-ig, Consolacion has grown into a bustling municipality with a story of resilience.
+                    </p>
+
+                    <p>Originally part of Mandaue, it became an independent town in 1871, only to face challenges that led to its 
+                        reintegration with Mandaue in the early 1900s.
+                    </p>
+
+                    <p>
+                        Through determination, the people petitioned for independence, and in 1920, Consolacion was reborn as a 
+                        municipality. It was named in honor of the governor’s daughter.
+                    </p>
+                </div>
             </section>
             
-            <section id="sec3">
+            <section class="media" id="media-2">
                 <div class="pic">
                     <img src="/about-us/images/sarok.jpg" alt="A girl dancing in the Sarok Festival while holding a Sarok hat.">
                 </div>
                 <div class="text">
                     <h3>Cultural Pride</h3>
-                    <p>Every February 14, Consolacion bursts into life with the Sarok Festival, a vibrant homage to its agricultural roots. 
+                    <p>
+                        Every February 14, Consolacion bursts into life with the Sarok Festival, a vibrant homage to its agricultural roots. 
                         The festival celebrates the Sarok, an eco-friendly bamboo-and-banana-leaf hat once worn by farmers to shield themselves. 
+                    </p>
+                    <p>
                         From colorful street dancing to intricately designed Sarok hats, the festival is a testament to the town’s creative spirit 
-                        and cultural heritage.</p>
-                    <p>Consolacion is also home to the Miligoy de Cebu, a traditional courtship dance performed with bamboo castanets.</p>
+                        and cultural heritage.
+                    </p>
+                    <p>
+                        Consolacion is also home to the Miligoy de Cebu, a traditional courtship dance performed with bamboo castanets.
+                    </p>
+                </div>
+            </section>
+
+            <section class="media" id="media-3">
+                <div class="pic">
+                    <img src="/about-us/images/cyria-kandingan.png" alt="A Filipino Carinderia (Eatery) located in Consolacion.">
+                </div>
+                <div class="text">
+                    <h3>Flavors of Consolacion</h3>
+                    <p>
+                        Consolacion’s culinary heritage is rooted in Cebuano favorites like <b>kaldereta</b>, <b>sinugba</b>, and <b>kilawin</b>, 
+                        often enjoyed in local eateries such as Cyria's Kandingan.
+                    <p>
+                        During the Sarok Festival, food takes center stage alongside the cultural festivities, showcasing both traditional delicacies and 
+                        modern takes on local flavors, making Consolacion a hidden gem for food lovers exploring Cebu.
+                    </p>
                 </div>
             </section>
             
-            <section id="sec4">
+            <section class="media" id="media-4">
+                <div class="pic">
+                    <img src="/about-us/images/greenlandcabin.jpg" alt="A camping site with a bonfire set and chairs.">
+                </div>
                 <div class="text">
                     <h3>Nature and Leisure</h3>
-                    <p>Consolacion’s rolling hills and fertile landscapes are home to mountain cafes, eco-farms, 
+                    <p>
+                        Consolacion’s rolling hills and fertile landscapes are home to mountain cafes, eco-farms, 
                         and scenic spots perfect for relaxation.
                     </p>
                 </div>
-                <div class="pic">
-                    <img src="/about-us/images/greenland.jpg" alt="An indoor pool surrounded by green plants.">
-                    <img src="/about-us/images/greenlandcabin.jpg" alt="A camping site with a bonfire set and chairs.">
-                </div>
             </section>
             
-            <section id="sec5">
-                <div class="text">
-                    <h3>Recent Achievements</h3>
+            <section id="recent-achievements">
+                <h3>Recent Achievements</h3>
+                <div class="cards-container">
                     <div class="card">
+                        <img src="/about-us/images/ach-5.jpg" alt="">
+                        <p>Consolacion was also honored as a High Performing Peace and Order Council at the same prestigious event.
+                            Both awards were received by MLGOO Sheryl A. Pidor and PLTCOL Eunil Avergonzado. Congratulations, Consolacion!
+                        </p>
+                        <span class="date">December 17, 2024</span>
+                    </div>
+                    <div class="card">
+                        <img src="/about-us/images/ach-4.jpg" alt="">
+                        <p>The Municipality of Consolacion, led by Mayor Teresa P. Alegado, received recognition for the 
+                            High Functionality of the Anti-Drug Abuse Council during the 2024 Bansiwag Awards for LGUs by 
+                            the Department of the Interior and Local Government Region VII.
+                        </p>
+                        <span class="date">December 17, 2024</span>
+                    </div>
+                    <div class="card">
+                        <img src="/about-us/images/ach-3.jpg" alt="">
+                        <p>Consolacion’s Sangguniang Kabataan Federation, led by Honorable Shella A. Carpina, 
+                            secured a spot in the Top 10 of the Sugboanong Kabatan-onan SugboVlog Challenge. 
+                            This initiative by the provincial government empowers youth leaders to showcase Cebu’s tourism, 
+                            flagship programs, and initiatives through creative vlogging. The SK Federation was awarded a 
+                            1 million-peso infrastructure project grant and a 100,000-peso cash prize.
+                        </p>
+                        <span class="date">December 16, 2024</span>
+                    </div>
+                    <div class="card">
+                        <img src="/about-us/images/ach-1.jpg" alt="">
                         <p>Consolacion’s commitment to resilience and excellence was recognized with the prestigious 
                             Gawad KALASAG award, honoring its disaster risk management and humanitarian efforts. This 
-                            achievement reflects the community's dedication to safety and progress.<br>
-                
-                            <span class="date">November 26, 2024</span><br> 
+                            achievement reflects the community's dedication to safety and progress.                 
                         </p>
+                        <span class="date">November 26, 2024</span>
                     </div>
-                    
                     <div class="card">
+                        <img src="/about-us/images/ach-2.jpg" alt="">
                         <p>Consolacion's dedication to good governance and public service excellence was celebrated 
                             with the prestigious 2024 Seal of Good Local Governance for Region VII. This recognition 
                             highlights the collective efforts of Mayor Teresa P. Alegado, local officials, department 
-                            heads, and LGU staff in fostering transparency, accountability, and community progress.<br>
-                
-                            <span class="date">November 14, 2024</span>
+                            heads, and LGU staff in fostering transparency, accountability, and community progress.
                         </p>
+                        <span class="date">November 14, 2024</span>
                     </div>
-                    
+                    <div class="card">
+                        <img src="/about-us/images/ach-0.jpg" alt="">
+                        <p>The Consolacion Municipal Police Station, under the leadership of PLTCOL Eunil Avergonzado, 
+                            was recognized as the Best Performing Class A Municipal Police Station in Central Visayas for October. 
+                            This prestigious accolade highlights its exemplary efforts in operations against illegal gambling, 
+                            apprehension of wanted persons, and the fight against illegal drugs.
+                        </p>
+                        <span class="date">November 3, 2024</span>
+                    </div>
                 </div>
             </section>
         </main>
