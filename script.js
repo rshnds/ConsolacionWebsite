@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach((section) => observer.observe(section));
 });
 
+
 function backToTop(){
 //for back to top button
 const backToTopButton = document.getElementById('back-to-top');
