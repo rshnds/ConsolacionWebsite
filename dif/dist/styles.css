@@ -69,3 +69,119 @@
     align-self: flex-start; /* Keeps button aligned neatly */
 }
 
+
+.custom-footer {
+    background-color: #4c5024;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    padding: 40px 20px;
+    color: #bbb;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-footer-image {
+    position: absolute;
+    bottom: 68px;
+    left: 0px; 
+    width: 350px; 
+    height: auto; 
+    z-index: 1;
+    opacity: 0.8; 
+}
+
+.custom-footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; 
+}
+
+.custom-footer-column {
+    flex: 1 1 calc(20% - 20px);
+    margin: 10px;
+    min-width: 150px;
+}
+
+.custom-footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.custom-footer-logo span {
+    color: #e5e5b1;
+}
+
+.custom-footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.custom-footer-column ul {
+    list-style: none;
+    padding: 0;
+    }
+
+.custom-footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.custom-footer-column ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.custom-footer-column ul li a:hover {
+    color: #e5e5b1;
+}
+
+.custom-footer-social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.custom-footer-social-icons a {
+    color: #bbb;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.custom-footer-social-icons a:hover {
+    color: #e5e5b1;
+}
+
+.custom-footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.custom-footer-bottom a {
+    color: #e5e5b1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.custom-footer-bottom a:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .custom-footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-footer-column {
+    text-align: center;
+    margin-bottom: 20px;
+    }
+}

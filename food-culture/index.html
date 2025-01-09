@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Food and Culture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    
+    <style>
+        body {
+    font-family: 'Outfit', sans-serif;
+}
+
+
+        html {
+        scroll-behavior: smooth;
+        overflow: visible;
+        position: static;
+    }
+    img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+    .carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #E5E5B1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  flex: 0 0 calc(100% / 3); 
+}
+
+.card img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 10px;
+}
+
+.carousel-container button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 100%; 
+  }
+}
+
+/* sa footer*/
+
+
+.custom-footer {
+    background-color: #4C5024; /* Footer background color */
+    color: #E5E5B1; /* Text color */
+    padding: 20px 10px; /* Smaller padding */
+    text-align: center;
+    font-size: 0.9rem; /* Smaller text size */
+}
+
+.custom-footer-image {
+    max-height: 80px; /* Reduce image height */
+    padding-left: 3rem;
+    margin-bottom: 10px;
+}
+
+.custom-footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px; /* Reduce gaps between columns */
+}
+
+.custom-footer-column {
+    flex: 1;
+    min-width: 120px; /* Adjust minimum width */
+}
+
+.custom-footer-column h3 {
+    font-size: 1rem; /* Reduce heading size */
+    margin-bottom: 5px; /* Smaller margin below headings */
+}
+
+.custom-footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-footer-column ul li {
+    margin: 5px 0; /* Reduce spacing between list items */
+}
+
+.custom-footer-column ul li a {
+    color: #E5E5B1;
+    text-decoration: none;
+    font-size: 0.85rem; /* Smaller link size */
+}
+
+.custom-footer-social-icons a {
+    margin: 0 5px;
+    font-size: 1rem; /* Smaller icon size */
+}
+
+.custom-footer-bottom {
+    font-size: 0.8rem; /* Reduce bottom text size */
+    margin-top: 10px;
+}
+
+.custom-footer-logo {
+    font-size: 1.2rem; /* Smaller logo text */
+}
+
+.custom-footer a {
+    transition: color 0.3s;
+}
+
+.custom-footer a:hover {
+    color: #ffffff; /* Hover color for links */
+}
+
+@media (max-width: 768px) {
+  .custom-footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-footer-column {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+    </style>
+</head>
+<body class="h-screen bg-cover bg-center relative" style="background-repeat: no-repeat; background-size: 100% 100%; background-position: center;">
+  <header class="bg-[#E5E5B1] bg-opacity-80 py-4 relative z-20">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="flex-shrink-0"> <a href="#">
+          <img src="image-culture/logo.png" alt="Logo of Consolacion Tourism"
+          class="h-10 w-auto">
+            </a>
+          </div>
+          <nav class="space-x-10 hidden md:flex">
+              <a class="text-[#4C5024] hover:font-bold" href="/index.html">Home</a>
+              <a class="text-[#4C5024] hover:font-bold" href="/about-us/index.html">About Us</a>
+              <a class="text-[#4C5024] hover:font-bold" href="/attractions/index.html">Attractions</a>
+              <a class="text-[#4C5024] hover:font-bold" href="/final.html">Events</a>
+              <a class="text-[#4C5024] hover:font-bold" href="#">Culture</a>
+              <a class="text-[#4C5024] hover:font-bold" href="#">Contact</a>
+          </nav>
+          <div class="md:hidden">
+              <button class="text-green-900 focus:outline-none" id="menu-button"><i class="fas fa-bars"></i></button>
+          </div>
+      </div>
+      <div class="hidden md:hidden" id="mobile-menu">
+          <nav class="flex flex-col space-y-4 mt-4 px-4">
+              <a class="text-[#4C5024] hover:font-bold" href="/index.html">Home</a>
+              <a class="text-[#4C5024] hover:font-bold" href="/about-us/index.html">About Us</a>
+              <a class="text-[#4C5024] hover:font-bold" href="/attractions/index.html">Attractions</a>
+              <a class="text-[#4C5024] hover:font-bold" href="/final.html">Events</a>
+              <a class="text-[#4C5024] hover:font-bold" href="#">Culture</a>
+              <a class="text-[#4C5024] hover:font-bold" href="#">Contact</a>
+          </nav>
+      </div>
+  </header>
+
+  <!-- Gradient overlay on top of the background image -->
+  <div class="absolute inset-0 h-full bg-gradient-to-r from-[hsla(69,45%,12%,0.7)] via-[hsla(69,45%,12%,0.4)] to-transparent pointer-events-none"></div>
+
+    <main>
+        <section id="culture-section" class="bg-white pb-16">
+            <h2 class="text-4xl font-bold text-center text-green-800 mb-12"></h2>
+            <div class="relative">
+               
+                <img id="background-image" 
+                    alt="A person making a traditional woven hat in a dimly lit room" 
+                    class="w-full h-screen object-cover" 
+                    src="image-culture/sar.jpg"
+                />
+        
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start p-8">
+                   
+                    <h1 id="main-title" class="text-4xl font-bold text-white mb-4">SAROK MAKING</h1>
+                    
+                   
+                    <p id="main-description" class="text-lg max-w-md mb-8 text-white">
+                        is a traditional woven hat from Consolacion, Cebu. Made from bamboo strips and banana leaves, it's known for its distinct conical shape and craftsmanship. Originally used for protection from the sun and rain, the Sarok symbolizes Consolacion's rich cultural heritage and resilience.
+                    </p>
+                    
+                    <div class="flex space-x-4">
+                        
+                        <div class="relative cursor-pointer" onclick="swapContent('fishing')">
+                            <img id="fishing-thumbnail" 
+                                alt="Fishing" 
+                                class="w-32 h-32 object-cover rounded-lg" 
+                                src="image-culture/fishing.jpg"
+                            />
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg">
+                            </div>
+                        </div>
+        
+                        
+                        <div class="relative cursor-pointer" onclick="swapContent('san-narciso')">
+                            <img id="san-narciso-thumbnail" 
+                                alt="San Narciso" 
+                                class="w-32 h-32 object-cover rounded-lg" 
+                                src="image-culture/san narciso.jpg"
+                            />
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="local-cuisine-section" class="relative bg-white py-16"> 
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-green-800 mb-12">Discover Local Cuisine</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                        <img alt="Local Dish 1" class="rounded-lg w-full h-48 object-cover mb-4" src="image-culture/talaba.jpg"/>
+                        <h3 class="text-xl font-semibold text-green-800 mb-2">Talaba</h3>
+                        <p class="text-gray-700">also known as oysters, is a popular seafood delicacy in Consolacion and other coastal areas of the Philippines. Talaba is typically enjoyed in various ways, including raw, steamed, grilled, or cooked in flavorful dishes.</p>
+                    </div>
+                    <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                        <img alt="Local Dish 2" class="rounded-lg w-full h-48 object-cover mb-4" src="image-culture/lechon belly.jpg"/>
+                        <h3 class="text-xl font-semibold text-green-800 mb-2">Lechon Belly</h3>
+                        <p class="text-gray-700">Lechon Belly is a beloved dish in Consolacion, Cebu. Often served during festive occasions and family gatherings, this dish showcases the perfect balance of tender, flavorful pork and a crispy, golden skin.</p>
+                    </div>
+                    <div class="bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                        <img alt="Local Dish 3" class="rounded-lg w-full h-48 object-cover mb-4" src="image-culture/dinuguan.jpg"/>
+                        <h3 class="text-xl font-semibold text-green-800 mb-2">Dinuguan</h3>
+                        <p class="text-gray-700">This savory stew made from pork, pig's blood, vinegar, and spices is a traditional Filipino dish. In Consolacion, Dinuguan is commonly paired with puto (steamed rice cakes) and enjoyed during family gatherings and festivals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="dining-spots-section" class="relative py-16 bg-gradient-to-r from-[#e5e5b1] to-[#6e7d38]">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-green-800 mb-12">Popular Dining Spots</h2>
+                <div class="carousel-container relative">
+                    
+                    <div class="carousel flex transition-transform duration-500 ease-in-out">
+                        <div class="card bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                            <img alt="Spot 1" class="rounded-lg w-full h-48 object-cover mb-4" src="image-culture/cebu original lechon belly.jpg"/>
+                            <h3 class="text-xl font-semibold text-green-800 mb-2">Cebu's Original Lechon Belly</h3>
+                            <p class="text-gray-700">is a well-known dining spot in Consolacion, famous for serving lechon belly, a Filipino specialty. The dish features a succulent, tender belly of pork, marinated in a flavorful mix of herbs and spices, then slow-cooked to perfection until the skin is crispy and golden brown.</p>
+                            <p class="text-gray-500"><br/>Location: SM Consolacion Supermarket Food Area...</p>
+                        </div>
+                        <div class="card bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                            <img alt="Spot 2" class="rounded-lg w-full h-48 object-cover mb-4" src="image-culture/Lokacion Food Park.jpg"/>
+                            <h3 class="text-xl font-semibold text-green-800 mb-2">Lokacion Food Park</h3>
+                            <p class="text-gray-700">known for offering a variety of modern takes on traditional Filipino dishes. It provides a cozy and vibrant atmosphere where visitors can enjoy a diverse selection of food options, ranging from local favorites to contemporary twists.</p>
+                            <p class="text-gray-500"><br/>Location: 9XF5+V8P, Consolacion, Cebu</p>
+                        </div>
+                        <div class="card bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                            <img alt="Spot 3" class="rounded-lg w-full h-48 object-cover mb-4" src="image-culture/Co Jordan Talaba and Bangus Eatery.jpg"/>
+                            <h3 class="text-xl font-semibold text-green-800 mb-2">Co Jordan Talaba and Bangus Eatery</h3>
+                            <p class="text-gray-700">is a popular dining spot in Consolacion, known for serving fresh and affordable seafood, particularly talaba (oysters) and bangus (milkfish). The eatery is a go-to place for seafood lovers, offering a variety of dishes featuring these local favorites.</p>
+                            <p class="text-gray-500"><br/>Location: 9X8G+QGH, Consolacion, 6001 Cebu</p>
+                        </div>
+                        <div class="card bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                            <img alt="Spot 4" class="rounded-lg w-full h-48 object-cover mb-4" src="image-culture/nanda cafe food.jpg"/>
+                            <h3 class="text-xl font-semibold text-green-800 mb-2">Nanda Café</h3>
+                            <p class="text-gray-700">is a popular spot in Consolacion known for its cozy ambiance and wide selection of affordable meals. The café offers a variety of dishes, with a focus on Filipino comfort food and local specialties.</p>
+                            <p class="text-gray-500"><br/>Location: Brgy, Consolacion, Cebu</p>
+                        </div>
+                        <div class="card bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                            <img alt="Spot 5" class="rounded-lg w-full h-48 object-cover mb-4" src="image-culture/Ristorante Tinca.jpg"/>
+                            <h3 class="text-xl font-semibold text-green-800 mb-2">Ristorante Tinca</h3>
+                            <p class="text-gray-700">is a well-known restaurant in Consolacion, celebrated for its delicious Italian and Mediterranean-inspired cuisine. The restaurant offers a variety of dishes, including pastas, pizzas, and other classic Italian meals, all prepared with fresh ingredients and authentic flavors.</p>
+                            <p class="text-gray-500"><br/>Location: 9XJ9+9Q7, Cebu N Rd, Pitogo...</p>
+                        </div>
+                        <div class="card bg-[#E5E5B1] p-6 rounded-lg shadow-lg">
+                            <img alt="Spot 6" class="rounded-lg w-full h-48 object-cover mb-4" src="image-culture/Tasha_s Korean Grill and Restaurant.jpg"/>
+                            <h3 class="text-xl font-semibold text-green-800 mb-2">Tasha's Korean Grill and Restaurant</h3>
+                            <p class="text-gray-700">Tasha's Korean Grill and Restaurant in Consolacion is a popular dining destination known for serving authentic Korean cuisine. The restaurant is famous for its grilled dishes, particularly Korean BBQ, where diners can enjoy grilling their own meat at the table. It offers a variety of Korean dishes such as bulgogi, samgyeopsal (grilled pork belly), bibimbap, and kimchi, all served with flavorful sides.</p>
+                            <p class="text-gray-500"><br/>Location: Purok Bougainvilla, Consolacion, 6001</p>
+                        </div>
+                    </div>
+                   
+                    <button class="prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-4 rounded-full z-10" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-4 rounded-full z-10" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+          
+        
+        
+
+        
+        
+        
+        <button id="back-to-top"
+        class="hidden fixed bottom-6 right-6 bg-[#4C5024] text-[#E5E5B1] py-2 px-4 rounded-lg shadow-lg hover:bg-[#6F7743] transition z-50">↑</button>
+        
+        <footer class="custom-footer">
+          <div class="custom-footer-container">
+              <div class="custom-footer-column">
+                  <h3 class="custom-footer-logo pb-3">PaVic<span class="font-bold">Team</span></h3>
+                  <img src="image-culture/bgbg.png" alt="Footer Decoration" class="custom-footer-image" />
+              </div>
+              <div class="custom-footer-column custom-footer-links">
+                  <ul>
+                      <li><a href="/index.html">Home</a></li>
+                      <li><a href="/about-us/index.html">About us</a></li>
+                      <li><a href="/attractions/index.html">Attractions</a></li>
+                      <li><a href="#">Events and Festival</a></li>
+                      <li><a href="#">Food and Culture</a></li>
+                  </ul>
+              </div>
+              <div class="custom-footer-column">
+                  <h3>Contact Us</h3>
+                  <ul>
+                      <li>Consolacion, Cebu, Philippines</li>
+                      <li>+123 456 7890</li>
+                  </ul>
+              </div>
+              <div class="custom-footer-column">
+                  <h3>Quick Link</h3>
+                  <ul>
+                      <li><a href="#">Style Guide</a></li>
+                      <li><a href="#">Career</a></li>
+                      <li><a href="#">Help Text</a></li>
+                  </ul>
+              </div>
+              <div class="custom-footer-column">
+                  <h3>Social Share</h3>
+                  <div class="custom-footer-social-icons">
+                      <a href="https://www.facebook.com/profile.php?id=61555137257374/"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://x.com/o58277"><i class="fab fa-twitter"></i></a>
+                      <a href="https://www.linkedin.com/in/kristofergerard-bayon-on-760250296/"><i class="fab fa-linkedin"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="custom-footer-bottom">
+              <p>&copy; Copyright 2024. Powered by <a href="#">PaVic<span class="font-bold">Team</span></a></p>
+          </div>
+      </footer>
+      
+          
+        
+        
+        
+
+        <script>
+          
+            const contentData = {
+                "sarok-making": {
+                    title: "SAROK MAKING",
+                    description: "is a traditional woven hat from Consolacion, Cebu. Made from bamboo strips and banana leaves, it's known for its distinct conical shape and craftsmanship. Originally used for protection from the sun and rain, the Sarok symbolizes Consolacion's rich cultural heritage and resilience.",
+                    image: "image-culture/sar.jpg",
+                    textColor: "white",
+                },
+                "fishing": {
+                    title: "FISHING",
+                    description: "fishing plays an important role in the livelihood and culture of its coastal barangays. Located near the Mactan Channel, these barangays take advantage of the area's rich marine resources.",
+                    image: "image-culture/fishing.jpg",
+                    textColor: "white",
+                },
+                "san-narciso": {
+                    title: "PATRON SAINT DEVOTION",
+                    description: "Consolacion's devotion to San Narciso, its patron saint, is a key aspect of the town’s cultural and religious identity. The celebration is deeply rooted in Filipino Catholic traditions and reflects the town’s unity and faith.",
+                    image: "image-culture/san narciso.jpg",
+                    textColor: "white",
+                },
+            };
+       
+            function swapContent(location) {
+                
+                const clickedData = contentData[location];
+        
+                
+                document.getElementById('background-image').src = clickedData.image;
+                document.getElementById('main-title').textContent = clickedData.title;
+                document.getElementById('main-description').textContent = clickedData.description;
+        
+                document.getElementById('main-title').style.color = clickedData.textColor;
+                document.getElementById('main-description').style.color = clickedData.textColor;
+        
+                
+                const currentData = contentData['sarok-making'];
+                if (location === 'fishing') {
+                    
+                    document.getElementById('fishing-thumbnail').src = currentData.image;
+                    contentData['fishing'] = currentData;
+                } else if (location === 'san-narciso') {
+    
+                    document.getElementById('san-narciso-thumbnail').src = currentData.image;
+                    contentData['san-narciso'] = currentData;
+                }
+        
+               
+                contentData['sarok-making'] = clickedData;
+            }
+        
+            
+            document.getElementById('menu-button').addEventListener('click', function() {
+                var menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            });
+        
+           
+            const backToTopButton = document.getElementById('back-to-top');
+        
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 200) {
+                    backToTopButton.classList.remove('hidden');
+                } else {
+                    backToTopButton.classList.add('hidden');
+                }
+            });
+        
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            let currentIndex = 0;
+
+            function moveSlide(direction) {
+  const carousel = document.querySelector('.carousel');
+  const cardWidth = document.querySelector('.card').offsetWidth + 20; 
+  const totalCards = document.querySelectorAll('.card').length;
+
+  currentIndex += direction;
+
+
+  if (currentIndex >= totalCards) {
+    currentIndex = 0;
+  }
+  
+  else if (currentIndex < 0) {
+    currentIndex = totalCards - 1;
+  }
+
+  carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+        </script>        
+
+
+
+</body>
+</html>

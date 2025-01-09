@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-function backToTop(){
+
 //for back to top button
 const backToTopButton = document.getElementById('back-to-top');
 
@@ -61,4 +61,5 @@ window.scrollTo({
     behavior: 'smooth'
 });
 });
-}
+
+

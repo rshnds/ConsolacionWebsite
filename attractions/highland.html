@@ -24,6 +24,74 @@
         .carousel img.active {
             opacity: 1;
         }
+        .custom-footer {
+    background-color: #4C5024; /* Footer background color */
+    color: #E5E5B1; /* Text color */
+    padding: 20px 10px; /* Smaller padding */
+    text-align: center;
+    font-size: 0.9rem; /* Smaller text size */
+}
+
+.custom-footer-image {
+    max-height: 80px; /* Reduce image height */
+    padding-left: 3rem;
+    margin-bottom: 10px;
+}
+
+.custom-footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px; /* Reduce gaps between columns */
+}
+
+.custom-footer-column {
+    flex: 1;
+    min-width: 120px; /* Adjust minimum width */
+}
+
+.custom-footer-column h3 {
+    font-size: 1rem; /* Reduce heading size */
+    margin-bottom: 5px; /* Smaller margin below headings */
+}
+
+.custom-footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-footer-column ul li {
+    margin: 5px 0; /* Reduce spacing between list items */
+}
+
+.custom-footer-column ul li a {
+    color: #E5E5B1;
+    text-decoration: none;
+    font-size: 0.85rem; /* Smaller link size */
+}
+
+.custom-footer-social-icons a {
+    margin: 0 5px;
+    font-size: 1rem; /* Smaller icon size */
+}
+
+.custom-footer-bottom {
+    font-size: 0.8rem; /* Reduce bottom text size */
+    margin-top: 10px;
+}
+
+.custom-footer-logo {
+    font-size: 1.2rem; /* Smaller logo text */
+}
+
+.custom-footer a {
+    transition: color 0.3s;
+}
+
+.custom-footer a:hover {
+    color: #ffffff; /* Hover color for links */
+}
     </style>
 
 <body class="relative">
@@ -193,9 +261,49 @@
     <button id="back-to-top"
         class="hidden fixed bottom-6 right-6 bg-[#4C5024] text-[#E5E5B1] py-2 px-4 rounded-lg shadow-lg hover:bg-[#6F7743] transition">↑</button>
 
-    <footer class="bg-[#4C5024] text-[#E5E5B1] py-4 text-center">
-        &copy; 2024 Wooloo Resort. All rights reserved.
-    </footer>
+        <footer class="custom-footer mt-36">
+            <div class="custom-footer-container">
+                <div class="custom-footer-column">
+                    <h3 class="custom-footer-logo pb-3">PaVic<span class="font-bold">Team</span></h3>
+                    <img src="images/footer-logo.png" alt="Footer Decoration" class="custom-footer-image" />
+                </div>
+                <div class="custom-footer-column custom-footer-links">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about-us/index.html">About us</a></li>
+                        <li><a href="/attractions/index.html">Attractions</a></li>
+                        <li><a href="#">Events and Festival</a></li>
+                        <li><a href="#">Food and Culture</a></li>
+                    </ul>
+                </div>
+                <div class="custom-footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Consolacion, Cebu, Philippines</li>
+                        <li>+123 456 7890</li>
+                    </ul>
+                </div>
+                <div class="custom-footer-column">
+                    <h3>Quick Link</h3>
+                    <ul>
+                        <li><a href="#">Style Guide</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Help Text</a></li>
+                    </ul>
+                </div>
+                <div class="custom-footer-column">
+                    <h3>Social Share</h3>
+                    <div class="custom-footer-social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61555137257374/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/o58277"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/kristofergerard-bayon-on-760250296/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-footer-bottom">
+                <p>&copy; Copyright 2024. Powered by <a href="#">PaVic<span class="font-bold">Team</span></a></p>
+            </div>
+        </footer>
 
     <script>
         const menuButton = document.getElementById('menu-button');
