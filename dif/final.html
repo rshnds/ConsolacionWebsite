@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Events and Festival</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/535926b96b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link href="./dist/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        #back-to-top:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            background-color: #4C5024; /* Purple background */
+            color: white; /* White arrows */
+            width: 50px; /* Make the button circular */
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%; /* Fully round */
+            opacity: 0.5; /* Slight transparency */
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .swiper-container:hover .swiper-button-prev,
+        .swiper-container:hover .swiper-button-next {
+            opacity: 1; /* Fully visible on hover */
+        }
+
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            transform: scale(1.1); /* Slight enlargement on hover */
+        }
+
+        /* Arrows */
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            font-size: 16px; /* Adjust arrow size */
+            font-weight: bold;
+        }
+
+        header nav {
+            font-size: 0.875rem;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        
+    </style>
+    
+</head>
+
+<body class="h-screen bg-cover bg-center relative" style="background-image: url('./img/bg1.jpg'); background-repeat: no-repeat; background-size: 100% 100%; background-position: center;">
+    <header class="bg-[#E5E5B1] bg-opacity-80 py-4 fixed top-0 left-0 w-full z-20 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-lg font-bold">
+                <img src="img/lacion-logo-1.png" alt="Logo" class="h-8">
+            </div>
+            <nav class="space-x-10 hidden md:flex">
+                <a class="text-[#4C5024] hover:font-bold" href="/index.html">Home</a>
+                <a class="text-[#4C5024] hover:font-bold" href="/about-us/index.html">About Us</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Attractions</a>
+                <a class="text-[#4C5024] hover:font-bold" href="/final.html">Events</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Culture</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-green-900 focus:outline-none" id="menu-button"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <nav class="flex flex-col space-y-4 mt-4 px-4">
+                <a class="text-[#4C5024] hover:font-bold" href="/index.html">Home</a>
+                <a class="text-[#4C5024] hover:font-bold" href="/about-us/index.html">About Us</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Attractions</a>
+                <a class="text-[#4C5024] hover:font-bold" href="/final.html">Events</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Culture</a>
+                <a class="text-[#4C5024] hover:font-bold" href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Gradient overlay on top of the background image -->
+    <div class="absolute inset-0 h-full bg-gradient-to-r from-[hsla(69,45%,12%,0.7)] via-[hsla(69,45%,12%,0.4)] to-transparent pointer-events-none"></div>
+
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 relative z-10">
+
+        <section class="container mx-auto px-4 py-16 relative z-10">
+        <main class="container mx-auto px-4 py-16 relative z-10 top-[-20px]">
+            <div class="flex flex-col md:flex-row items-start">
+                <div class="text-[#F9F9EC] md:w-1/2">
+                    <p class="text-sm mt-20"><i class="fa-solid fa-calendar-alt"></i> Annual Event</p>
+                    <h1 class="text-6xl font-bold mt-4">
+                        Sarok Festival
+                    </h1>
+                    <p class="text-lg mt-4">
+                        The Sarok Festival is a celebration of culture and history in Consolacion, featuring vibrant parades,
+                        traditional dances, and music showcasing the local artistry and heritage.
+                    </p>
+                    <button
+                        id="learn-more-btn"
+                        class="mt-6 px-6 py-3 bg-transparent text-[#E5E5B1] border-2 border-[#E5E5B1] font-bold rounded-full hover:bg-[#E5E5B1] hover:text-[#4C5024] transition">
+                        Learn More
+                    </button>
+
+
+                </div>
+                <div class="relative md:w-1/2 mt-12 md:mt-0 md:ml-8" style="margin-top: 3.5rem;">
+                    <div class="carousel">
+                        <div class="carousel-item relative cursor-pointer">
+                            <img alt="Image of Sarok Festival" class="rounded-lg w-full h-96 object-cover"
+                                src="img/sarok.jpg" />
+                            <div
+                                class="absolute bottom-0 left-0 right-0 bg-[#4C5024] bg-opacity-60 text-white p-4 rounded-b-lg">
+                                <p class="text-sm"><i class="fa-solid fa-calendar-alt"></i> Consolacion</p>
+                                <h2 class="text-xl font-bold">
+                                    Sarok Festival Highlights
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        </section>
+    
+        <section id="events" class="container mx-auto px-4 py-16 relative z-10" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-[#4C5024] mb-6" data-aos="fade-right">Upcoming Events</h2>
+            <!-- Carousel Wrapper -->
+            <div class="swiper-container relative bg-[#E5E5B1] p-6 rounded-lg shadow-lg" data-aos="zoom-in">
+                <div class="swiper-wrapper flex">
+                    <!-- Event Cards -->
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <img class="w-full h-auto rounded-lg mb-4" src="img/streetparade.jpg" alt="A vibrant street parade with colorful costumes">
+                        <h3 class="text-xl font-bold mb-2">Street Parade</h3>
+                        <p class="text-sm mb-2">Date: January 15, 2025</p>
+                        <p class="text-sm mb-2">Location: Main Street, Consolacion</p>
+                        <p class="text-sm">Join us for a vibrant street parade featuring colorful costumes and lively music.</p>
+                    </div>
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <img class="w-full h-auto rounded-lg mb-4" src="img/danceperformance.jpg" alt="Traditional dance performance">
+                        <h3 class="text-xl font-bold mb-2">Dance Performance</h3>
+                        <p class="text-sm mb-2">Date: February 10, 2025</p>
+                        <p class="text-sm mb-2">Location: Town Plaza</p>
+                        <p class="text-sm">Experience the rich cultural heritage of Consolacion through traditional dance performances.</p>
+                    </div>
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <img class="w-full h-auto rounded-lg mb-4" src="img/musicconcert.jpg" alt="Music concert event">
+                        <h3 class="text-xl font-bold mb-2">Music Concert</h3>
+                        <p class="text-sm mb-2">Date: March 5, 2025</p>
+                        <p class="text-sm mb-2">Location: Sports Complex</p>
+                        <p class="text-sm">Enjoy a night of music and entertainment with performances from local bands and artists.</p>
+                    </div>
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                        <img class="w-full h-auto rounded-lg mb-4" src="img/communitycleanup.jpg" alt="Community Clean-Up Drive">
+                        <h3 class="text-xl font-bold mb-2">Community Clean-Up Drive</h3>
+                        <p class="text-sm mb-2">Date: April 10, 2025</p>
+                        <p class="text-sm mb-2">Location: Various Locations in Consolacion</p>
+                        <p class="text-sm">Join us in keeping our town clean and green. Volunteers are welcome!</p>
+                    </div>
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                        <img class="w-full h-auto rounded-lg mb-4" src="img/marathon.jpg" alt="Marathon event">
+                        <h3 class="text-xl font-bold mb-2">Marathon</h3>
+                        <p class="text-sm mb-2">Date: May 25, 2025</p>
+                        <p class="text-sm mb-2">Location: Sports Complex</p>
+                        <p class="text-sm">Participate in our annual marathon and promote a healthy lifestyle.</p>
+                    </div>
+                </div>
+                <!-- Navigation Buttons -->
+                <button class="swiper-button-prev" aria-label="Previous"></button>
+                <button class="swiper-button-next" aria-label="Next"></button>
+
+            </div>
+        </section>
+        
+                <!-- Add additional events similarly -->
+
+
+        <!-- Festivals Section -->
+        <section class="mb-8" data-aos="fade-up">   
+            <h2 class="text-3xl font-bold text-[#4C5024] mb-6" data-aos="fade-up">Festivals</h2>
+            <div class="swiper-container relative bg-[#E5E5B1] p-6 rounded-lg shadow-lg" data-aos="fade-up">
+                <!-- Swiper Wrapper -->
+                <div class="swiper-wrapper flex">
+                    <!-- Festival Cards -->
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="flip-right">
+                    <img class="w-full h-auto rounded-lg mb-4" src="img/birhen.jpg" alt="A grand celebration with fireworks">
+                    <h3 class="text-xl font-bold mb-2">Fiesta sa Birhen sa Consolacion</h3>
+                    <p class="text-sm mb-2">Date: September 21, 2025</p>
+                    <p class="text-sm mb-2">Location: Town Center</p>
+                    <p class="text-sm">Celebrate the town's fiesta with a grand celebration featuring fireworks, food stalls, and live performances.</p>
+                </div>
+                <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="flip-right">
+                    <img class="w-full h-auto rounded-lg mb-4" src="img/sinulog.jpg" alt="A grand celebration with fireworks">
+                    <h3 class="text-xl font-bold mb-2">Sinulog sa Consolacion</h3>
+                    <p class="text-sm mb-2">Date: May 15, 2025</p>
+                    <p class="text-sm mb-2">Location: Main Street</p>
+                    <p class="text-sm">Join the Sinulog festival with a colorful float parade and street dancing in honor of the Santo Niño.</p>
+                </div>
+                <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="flip-right">
+                    <img class="w-full h-auto rounded-lg mb-4" src="img/foodfestival.jpg" alt="A grand celebration with fireworks">
+                    <h3 class="text-xl font-bold mb-2">Food Festival</h3>
+                    <p class="text-sm mb-2">Date: June 10, 2025</p>
+                    <p class="text-sm mb-2">Location: Town Plaza</p>
+                    <p class="text-sm">Taste the best of Consolacion's culinary delights at the annual food festival featuring local dishes and delicacies.</p>
+                </div>
+                <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="flip-right">
+                    <img class="w-full h-auto rounded-lg mb-4" src="img/independenceday.jpg" alt="A grand celebration with fireworks">
+                    <h3 class="text-xl font-bold mb-2">Independence Day Celebration</h3>
+                    <p class="text-sm mb-2">Date: June 12, 2025</p>
+                    <p class="text-sm mb-2">Location: Town Center</p>
+                    <p class="text-sm">Celebrate Independence Day with a grand celebration featuring fireworks, parades, and cultural performances.</p>
+                </div>
+                <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="flip-right">
+                    <img class="w-full h-auto rounded-lg mb-4" src="img/flower.jpg" alt="A grand celebration with fireworks">
+                    <h3 class="text-xl font-bold mb-2">Feast Day of Our Lady of Mt. Carmel</h3>
+                    <p class="text-sm mb-2">Date: July 15, 2025</p>
+                    <p class="text-sm mb-2">Location: Main Street</p>
+                    <p class="text-sm">This annual fiesta includes religious activities such as a novena and a solemn Mass, as well as various cultural and social events like parades, dance presentations, and festivities in the community.</p>
+                </div>
+            <!-- Add additional festivals similarly -->
+            </div>
+                <!-- Navigation Buttons -->
+                <button class="swiper-button-prev" aria-label="Previous"></button>
+                <button class="swiper-button-next" aria-label="Next"></button>
+
+        </section>
+
+
+    <!-- Notable Festival and Events Section -->
+        <section class="mb-8" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-[#4C5024] mb-6" data-aos="fade-up">Notable Festival and Events</h2>
+            <div class="swiper-container relative bg-[#E5E5B1] p-6 rounded-lg shadow-lg" data-aos="fade-up">
+                <!-- Swiper Wrapper -->
+                <div class="swiper-wrapper flex">
+                    <!-- Festival Cards -->
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="flip-right">
+                        <img class="w-full h-auto rounded-lg mb-4" src="img/sarokfestivalpic.jpg" alt="A grand celebration with fireworks">
+                        <h3 class="text-xl font-bold mb-2">Sarok Festival</h3>
+                        <p class="text-sm mb-2">Date: February 14, 2025</p>
+                        <ul class="list-disc list-inside text-sm mb-2">
+                            <li>Street Dancing: Participants in colorful costumes inspired by the sarok.</li>
+                            <li>Cultural Showcases: Performances highlighting the traditions and lifestyle of the locals.</li>
+                            <li>Competitions: Artistic and cultural contests to engage the community.</li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="flip-right">
+                        <img class="w-full h-auto rounded-lg mb-4" src="img/Townfiestapic.jpg" alt="A grand celebration with fireworks">
+                        <h3 class="text-xl font-bold mb-2">Town Fiesta</h3>
+                        <p class="text-sm mb-2">Date: October 29, 2025</p>
+                        <ul class="list-disc list-inside text-sm mb-2">
+                            <li>Religious processions and masses honoring Saint Narcissus.</li>
+                            <li>Festive gatherings with abundant food shared among family and friends.</li>
+                            <li>Entertainment such as live music, pageants, and parades.</li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="flip-right">
+                        <img class="w-full h-auto rounded-lg mb-4" src="img/cebu-charter-day-event.jpg" alt="A grand celebration with fireworks">
+                        <h3 class="text-xl font-bold mb-2">Cebu Charter Day Event</h3>
+                        <p class="text-sm mb-2">Date: February 14, 2025</p>
+                        <ul class="list-disc list-inside text-sm mb-2">
+                            <li>Commemoration of Consolacion’s municipal status with civic and cultural activities.</li>
+                            <li>Government-organized programs, sports events, and entertainment shows.</li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="flip-right">
+                        <img class="w-full h-auto rounded-lg mb-4" src="img/xmas.jpg" alt="A grand celebration with fireworks">
+                        <h3 class="text-xl font-bold mb-2">Christmas and New Year Events</h3>
+                        <p class="text-sm mb-2">Date: December 2024 to January 2025</p>
+                        <ul class="list-disc list-inside text-sm mb-2">
+                            <li>Town-wide Christmas lighting displays.</li>
+                            <li>Community caroling and holiday events.</li>
+                            <li>New Year's Eve fireworks and celebrations.</li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="flip-right">
+                        <img class="w-full h-auto rounded-lg mb-4" src="img/holyweek.jpg" alt="A grand celebration with fireworks">
+                        <h3 class="text-xl font-bold mb-2">Holy Week Processions</h3>
+                        <p class="text-sm mb-2">Date: March 24 to March 30, 2025</p>
+                        <ul class="list-disc list-inside text-sm mb-2">
+                            <li>Devotional processions and reenactments of the Passion of Christ.</li>
+                            <li>Visita Iglesia (visiting churches) is popular among devotees in Consolacion.</li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide bg-white p-4 rounded-lg shadow-lg" data-aos="flip-right">
+                        <img class="w-full h-auto rounded-lg mb-4" src="img/semana.jpg" alt="A grand celebration with fireworks">
+                        <h3 class="text-xl font-bold mb-2">Semana sa Konsolasyon (Week in Consolacion)</h3>
+                        <p class="text-sm mb-2">Date: July 1 to July 7, 2025</p>
+                        <ul class="list-disc list-inside text-sm mb-2">
+                            <li>A week-long celebration featuring local talent, products, and cuisine.</li>
+                            <li>Trade fairs, exhibits, and community-building activities.</li>
+                        </ul>
+                    </div>
+                    <!-- Add additional events similarly -->
+                </div>
+                <!-- Navigation Buttons -->
+                <button class="swiper-button-prev" aria-label="Previous"></button>
+                <button class="swiper-button-next" aria-label="Next"></button>
+
+            </div>
+        </section>
+
+    <!-- Swiper.js CDN & Initialization -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',  /* Ensures horizontal layout */
+            slidesPerView: 2,  /* Displays 2 items at once */
+            spaceBetween: 30,  /* Adjust space between the cards */
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            loop: true, /* Makes the carousel loop back to the beginning after the last slide */
+            autoplay: {
+                delay: 4000, /* Adjust delay for automatic slide transition (in milliseconds) */
+                disableOnInteraction: false, /* Keeps autoplay even after user interaction */
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1, /* 1 item on small screens */
+                },
+                768: {
+                    slidesPerView: 2, /* 2 items on medium screens */
+                },
+                1024: {
+                    slidesPerView: 3, /* 3 items on larger screens */
+                }
+            }
+        });
+    </script>
+
+    </main>
+        <button id="back-to-top"
+            class="hidden fixed bottom-6 right-6 bg-[#4C5024] text-[#E5E5B1] py-2 px-4 rounded-lg shadow-lg hover:bg-[#6F7743] transition z-50">↑</button>
+
+    <script>
+        const backToTopButton = document.getElementById('back-to-top');
+
+        // Show or hide the button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+
+        // Scroll to the top when the button is clicked
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <script>
+        AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
+    </script>
+    <script>
+        document.getElementById('learn-more-btn').addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetSection = document.getElementById('events');
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    </script>
+    
+
+</body>
+</html>

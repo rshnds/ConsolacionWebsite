@@ -28,7 +28,7 @@ const contentData = {
     highlandEcofarm: {
         bgImage: "images/mango_ecofarm-1.jpg",
         title: "HIGHLAND MANGO ECOFARM",
-        location: "Brgy. Another Place, Consolacion",
+        location: "Brgy. Panoypoy, Consolacion",
         description: "Highland Mango Ecofarm provide a serene experience in a lush green environment, ideal for relaxation and retreats.",
         buttonText: "Explore Highland Mango Ecofarm",
         gradient: {
